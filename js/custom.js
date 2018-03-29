@@ -1,138 +1,147 @@
+ /*Плавный скролл к #якорю*/ 
+ $("nav").on('click','a[href^="#"]', function (event) {
+  event.preventDefault();
+  var id  = $(this).attr('href'),
+  top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 1500);
+});
+
+
 /*==============================
    PRELOADER
-==============================*/
-(function($){
+   ==============================*/
+   (function($){
     $(window).load(function() {
-	    $('#preloader').hide();
-    });
-})(jQuery);
+     $('#preloader').hide();
+   });
+  })(jQuery);
 
 $(".five li ul").hide(); // скрываем выпадающее меню
 $(".five li:has('.submenu')").hover(
   function(){
-  $(".five li ul").stop().fadeToggle(500);} /* отбираем элемент списка, который содержит элемент с классом .submenu и добавляем ему функцию при наведении, которая показывает и скрывает выпадающее меню */
-);
+    $(".five li ul").stop().fadeToggle(500);} /* отбираем элемент списка, который содержит элемент с классом .submenu и добавляем ему функцию при наведении, которая показывает и скрывает выпадающее меню */
+    );
 
 /*==============================
    SEARCH BUTTON SECRIPT
-==============================*/
-$(".search-btn").click(function(event){
+   ==============================*/
+   $(".search-btn").click(function(event){
     event.preventDefault()
     $(".search-section").slideToggle(500);
-});
+  });
 
 /*==============================
    FIX MENU
-==============================*/
-(function($){
+   ==============================*/
+   (function($){
     // menu fixed
     var navHeight = 40;
     var nav = $('.header-section');
     var dn =$('.discr');
     $(window).scroll(function () {
-        if ($(this).scrollTop() > navHeight ) {
-            nav.addClass("fixed"),
-            dn.addClass("dn");
+      if ($(this).scrollTop() > navHeight ) {
+        nav.addClass("fixed"),
+        dn.addClass("dn");
 
-        } else {
-            nav.removeClass("fixed"),
-            dn.removeClass("dn");
-        }
+      } else {
+        nav.removeClass("fixed"),
+        dn.removeClass("dn");
+      }
     });
 
-})(jQuery);
+  })(jQuery);
 
 /*==============================
     ISOTOPW WORK
-==============================*/
+    ==============================*/
 //(function($){
-$(window).load(function(){
+  $(window).load(function(){
     var selectedCategory;
     var $grid = $('.featured').isotope({
-        itemSelector: '.col-md-3',
-        masonry: {
-            columnWidth: '.col-md-3',
-        },
-        getSortData: {
-            selectedCategory: function( itemElem ) {
-                return $( itemElem ).hasClass( selectedCategory ) ? 0 : 1;
-            }
+      itemSelector: '.col-md-3',
+      masonry: {
+        columnWidth: '.col-md-3',
+      },
+      getSortData: {
+        selectedCategory: function( itemElem ) {
+          return $( itemElem ).hasClass( selectedCategory ) ? 0 : 1;
         }
-  });
-  var $items = $('.featured').find('.featured-items');
+      }
+    });
+    var $items = $('.featured').find('.featured-items');
 
-  $('.sort-button-group').on( 'click', '.button', function() {
-    selectedCategory = $( this ).attr('data-category');
-    if ( selectedCategory == 'all' ) {
+    $('.sort-button-group').on( 'click', '.button', function() {
+      selectedCategory = $( this ).attr('data-category');
+      if ( selectedCategory == 'all' ) {
         $grid.isotope({
-            sortBy: 'original-order'
+          sortBy: 'original-order'
         });
         $items.css({
-            opacity: 1
+          opacity: 1
         });
         return;
-    }
-    var selectedClass = '.' + selectedCategory;
-    $items.filter( selectedClass ).css({
+      }
+      var selectedClass = '.' + selectedCategory;
+      $items.filter( selectedClass ).css({
         opacity: 1
-    });
-    $items.not( selectedClass ).css({
+      });
+      $items.not( selectedClass ).css({
         opacity: 0
+      });
+      $grid.isotope('updateSortData');
+      $grid.isotope({ sortBy: 'selectedCategory' });
     });
-    $grid.isotope('updateSortData');
-    $grid.isotope({ sortBy: 'selectedCategory' });
+
+    $('.button-group').each( function( i, buttonGroup ) {
+      var $buttonGroup = $( buttonGroup );
+      $buttonGroup.on( 'click', 'li', function() {
+        $buttonGroup.find('.active').removeClass('active');
+        $( this ).addClass('active');
+      });
+    });
+
   });
 
-  $('.button-group').each( function( i, buttonGroup ) {
-        var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on( 'click', 'li', function() {
-            $buttonGroup.find('.active').removeClass('active');
-            $( this ).addClass('active');
-        });
-  });
-
-});
-
-(function($){
+  (function($){
     $('.featured').isotope({
-    itemSelector: '.featured-items',
-    layoutMode: 'masonry'
+      itemSelector: '.featured-items',
+      layoutMode: 'masonry'
     });
-})(jQuery);
+  })(jQuery);
 
 /*==============================
     CLIENT FEEDBACK
-==============================*/
-(function($){
-    var owl = $("#client");
-    owl.owlCarousel({
+    ==============================*/
+    (function($){
+      var owl = $("#client");
+      owl.owlCarousel({
         items : 4,
         itemsDesktop : [1000,3],
         itemsDesktopSmall : [900,2],
         itemsTablet: [600,1],
         itemsMobile : false
-    });
+      });
 
     // Custom Navigation Events
     $(".works-next").click(function(){
-        owl.trigger('owl.next');
+      owl.trigger('owl.next');
     })
     $(".works-prev").click(function(){
-        owl.trigger('owl.prev');
+      owl.trigger('owl.prev');
     })
-})(jQuery);
+  })(jQuery);
 /*
 $('#feedback').carousel({
     interval: 3000
-})*/
+  })*/
 
 /*==============================
     SCROLL ANIMATION
-==============================*/
-(function($){
+    ==============================*/
+    (function($){
      (function() {
       var Util,
-        __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+      __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
       Util = (function() {
         function Util() {}
@@ -316,11 +325,11 @@ $('#feedback').carousel({
     }).call(this);
 
 
-    wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset: 100
-      }
-    );
-    wow.init();
+ wow = new WOW(
+ {
+  animateClass: 'animated',
+  offset: 100
+}
+);
+ wow.init();
 })(jQuery);
