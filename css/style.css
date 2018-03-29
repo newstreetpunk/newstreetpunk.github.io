@@ -1611,3 +1611,17 @@ footer.footer p a{
 		z-index: 999;
 	}
 }
+
+/*Мои СТИЛИ*/
+
+#client .owl-item .item{
+	height: 200px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
