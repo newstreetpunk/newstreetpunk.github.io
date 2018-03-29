@@ -41,8 +41,8 @@
                     <div  class="col-md-6">
                         <div class="header-top-menu">
                             <ul class="nav nav-pills navbar-right">
-                             <li><a href="#"><i class="fa fa-vk"></i></a></li>
-                             <li><a href="#"><i class="fa fa-instagram"></i></a></li> 
+                             <li><a href="#" title="Мы Вконтакте"><i class="fa fa-vk"></i></a></li>
+                             <li><a href="#" title="Мы в Инстаграмм"><i class="fa fa-instagram"></i></a></li> 
                          </ul>
                      </div>
                  </div>
@@ -68,8 +68,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav five">
-                        <li class="active"><a href="#">Главная</a></li>
-                        <li><a href="#">О нас</a></li>
+                        <li class="active"><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
                         <li><a href="#">Категории <i class="fa fa-caret-down"></i></a>
                             <ul class="submenu" style="display: none; opacity: 1;">
                                 <li><a href="#">Женская</a></li>
@@ -120,7 +120,7 @@
                     <div class="carousel-caption">
                         <h2>Футболки <b>и</b> Джинсы</h2>
                         <h3>Со скидкой<Span> 20%</Span></h3>
-                        <a href="#">Получить скидку</a>
+                        <a href="#" class="slider_btn">Получить скидку</a>
                     </div>
                 </div>
                 <div class="item">
@@ -748,9 +748,7 @@
                             </div>
                             <div class="social-media">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-vk"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
                             </div>
@@ -761,12 +759,12 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+                                        <input type="text" class="form-control" id="name" placeholder="Ваше имя" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Ваш Email">
+                                        <input type="text" class="form-control" id="name" placeholder="Ваш Email" required>
                                     </div>
                                 </div>
                             </div>
@@ -780,14 +778,14 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="input-group">
-                                        <textarea name="" id="" class="form-control" cols="30" rows="5" placeholder="Ваше сообщение..."></textarea>
+                                        <textarea name="" id="" class="form-control" cols="30" rows="5" placeholder="Ваше сообщение..." required></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="input-group">
-                                        <input type="submit" class="contact-submit" value="Отправить" />
+                                        <input type="submit" class="contact-submit" value="Отправить"/>
                                     </div>
                                 </div>
                             </div>
@@ -801,13 +799,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="center">Web-разработчик <a href="https://vk.com/anatolpaspunk" target="_blank">Анатолий Журавлев</a>
-                        </p>
-                        
+                        <p class="center">Web-разработчик <a href="https://vk.com/anatolpaspunk" target="_blank">Анатолий Журавлев</a></p>
                     </div>
                 </div>
             </div>
         </footer>
+
+            <div class="my_modal">
+                <div class="modal_content">
+                    <div class="close">&times</div>
+                    <p>Для того, чтобы получить скидку, Вы должны заказать товар из <a href="action.html">каталога с акциями.</a></p>
+                    <a href="action.html" class="my_btn close_btn">Перейти в каталог</a>
+                </div>
+            </div>
 
         <!-- JQUERY -->
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
