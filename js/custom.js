@@ -6,6 +6,23 @@
   $('body,html').animate({scrollTop: top}, 1500);
 });
 
+/*Modal*/ 
+
+$('.slider_btn').on('click', function(){
+  $('.my_modal').addClass('db', 1500);
+  $('.close_btn, .close, .modal_content a').on('click', function(){
+    $('.my_modal').removeClass('db');
+  });
+});
+
+/*АКТИВНЫЙ ЯКОРЬ (ЛИШКА)*/ 
+$(function() {
+  $('nav li').on('click', function() {
+    $('nav li').removeClass("active");         
+    $(this).addClass("active");
+  });
+});
+
 
 /*==============================
    PRELOADER
