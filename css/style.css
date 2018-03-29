@@ -1625,3 +1625,14 @@ footer.footer p a{
 	-ms-align-items: center;
 	align-items: center;
 }
+
+.header-top-menu ul li a:hover{
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.service-item a{
+	color: #1abc9c;
+}
