@@ -1,0 +1,43 @@
+/* Colors */
+
+$color-main: #282828;
+$color-green: #6aa647;
+$color-green2: #2d9821;
+$color-gray: #939393;
+$color-gray2: #888888;
+$color-lightgray: #f5f5f5;
+$color-lightgray2: #b5b5b5;
+$white: #ffffff;
+$black: #000000;
+$brown: #887037;
+$color-gray-dark: #353535;
+$footer-bg: #232323;
+$light-brown: #9e8b5d;
+
+$input-bg: #f8f8f8;
+$border-color: #d1d1d1;
+$overlay: transparentize(#2e2e2e, 0.42);
+$overlay-light: transparentize(#bababa, 0.3);
+$outer-glow: transparentize($color-gray-dark, 0.75);
+
+$color-link: $color-green;
+
+
+
+
+
+
+/* Typography */
+
+$font-main: 'Roboto Condensed', sans-serif;
+$font-ubuntu: 'Ubuntu', sans-serif;
+
+/* Sizes */
+
+$page-wrapper: 1170px;
+$header-height-desk: 95px;
+$brdRad: 6px;
+
+$mobile-width: 768px;
+$tablet-width: 960px;
+$desktop-width: $page-wrapper;

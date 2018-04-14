@@ -1,0 +1,30 @@
+.breadcrumbs {
+  padding: 26px 0;
+}
+.breadcrumbs__list {
+
+}
+.breadcrumbs__item {
+  font-size: 15px;
+  font-weight: 300;
+  display: inline-block;
+  vertical-align: middle;
+  svg, i {
+    margin-right: 8px;
+  }
+  &:not(:last-of-type) {
+    &:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      border: 1px solid #cfcfcf;
+      transform: rotate(-45deg);
+      border-width: 0 1px 1px 0;
+      margin: 0 5px;
+    }
+  }
+}
+.breadcrumbs__link {
+  color: #00a8e2;
+}

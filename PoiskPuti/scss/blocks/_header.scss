@@ -1,0 +1,141 @@
+.header, .footer {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+.header {
+  height: $header-height-desk;
+  background-color: $white;
+  @include mobile {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 47px;
+  }
+}
+.header__wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header__logo {
+  padding-left: 5px;
+  font-size: 0;
+  padding-bottom: 13px;
+  width: 275px;
+  @include mobile {
+    width: 115px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0;
+    display: flex;
+  }
+}
+.header__logo-img {
+
+}
+.header__menu {
+  display: inline-flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 0 36px 18px;
+  @include mobileMin {
+    padding: 0 8px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.header__menu-item {
+  //float: left;
+  //margin: 0 24px;
+  &:not(:last-of-type) {
+    //margin-right: 50px;
+  }
+}
+.header__menu-link {
+  font-size: 20px;
+  color: $color-main;
+  &:hover {
+    color: $color-green;
+  }
+}
+.header__menu-link_active {
+  color: $color-green;
+}
+.header__right {
+  padding-bottom: 14px;
+  padding-right: 15px;
+  @include mobile {
+    display: none;
+  }
+}
+.header__auth {
+  text-align: right;
+  padding-right: 2px;
+  margin-bottom: 5px;
+}
+.header__auth-link {
+  color: $color-green;
+  font-size: 20px;
+  font-weight: 700;
+  svg {
+    color: $color-main;
+    margin-left: 8px;
+    transition: .3s opacity;
+  }
+  &:hover {
+    color: $color-main;
+    svg {
+      opacity: 0.8;
+    }
+  }
+}
+.hamburger {
+  display: none;
+  float: left;
+  height: 100%;
+  width: 47px;
+  justify-content: center;
+  align-items: center;
+  @include mobile {
+    display: flex;
+  }
+}
+.hamburger__inner {
+  position: relative;
+  font-size: 0;
+  width: 21px;
+  height: 13px;
+  span, &:after, &:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: $color-gray-dark;
+    width: 100%;
+    left: 0;
+    margin: auto;
+  }
+  span {
+    top: 0;
+    bottom: 0;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+}

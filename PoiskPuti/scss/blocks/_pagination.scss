@@ -1,0 +1,43 @@
+.pagination {
+  margin: 30px 0 80px;
+  display: flex;
+  justify-content: center;
+  @include mobile {
+    margin: 18px 0;
+  }
+}
+.pagination__link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $color-green;
+  font-size: 18px;
+  font-family: $font-ubuntu;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mobile {
+    width: 27px;
+    height: 27px;
+    font-size: 12px;
+  }
+  &:not(:last-of-type) {
+    margin-right: 16px;
+    @include mobile {
+      margin-right: 10px;
+    }
+  }
+  &:hover {
+    @extend .pagination__link_active;
+  }
+}
+.pagination__link_prev {
+
+}
+.pagination__link_next {
+
+}
+.pagination__link_active {
+  color: $color-main;
+  border-color: $color-main;
+}

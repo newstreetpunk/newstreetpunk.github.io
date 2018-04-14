@@ -1,0 +1,93 @@
+.sort-users {
+  float: right;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  .form-checkbox__photo{
+    span{
+      margin: 3px 20px 0;
+      font-size: 15px;
+      color: $black;
+    }
+  }
+}
+
+.checkbox~label:before{
+  border-radius: 0;
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid $color-lightgray2;
+}
+.sort-users__label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  svg {
+    margin-right: 4px;
+  }
+}
+.sort-users__dropdown {
+  padding: 4px 0;
+  background: $white;
+  top: 100%;
+  right: 0;
+  border: 1px solid transparentize($light-brown, .5);
+  position: absolute;
+  display: none;
+}
+.sort-users__dropdown-item {
+  span, a {
+    padding: 8px 31px;
+    display: block;
+    color: $light-brown;
+    position: relative;
+    svg {
+      position: absolute;
+      left: 14px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      color: $light-brown;
+    }
+  }
+  a {
+    &:hover {
+      background-color: transparentize($light-brown, .95);
+    }
+  }
+}
+.sort-users__link {
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  display: inline-block;
+  vertical-align: middle;
+  a, span {
+    color: $light-brown;
+    svg {
+      margin-right: 4px;
+    }
+    &:hover {
+      color: $color-green;
+    }
+  }
+}
+.sort-users__item {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.sort-users__map-link {
+  margin-left: 8px;
+  color: $light-brown;
+  display: inline-block;
+  vertical-align: middle;
+  &:hover {
+    color: $color-green;
+  }
+  svg {
+    margin-right: 4px;
+  }
+}

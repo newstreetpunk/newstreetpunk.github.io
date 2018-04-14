@@ -1,0 +1,37 @@
+.about-block {
+  padding-bottom: 20px;
+}
+.about-block__title {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.about-block__text {
+  font-size: 15px;
+  font-weight: 300;
+}
+.about-options {
+  background-color: $color-lightgray;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  padding: 32px 0;
+}
+.text-line-option {
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 36px;
+  position: relative;
+  &:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+  svg, i {
+    color: $color-green;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    min-width: 32px;
+  }
+}
+.text-line-option__label {
+  color: $color-green;
+}

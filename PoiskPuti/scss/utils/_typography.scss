@@ -1,0 +1,99 @@
+$fontsPath: '../fonts';
+
+// Если подключать шрифты из папки
+//@include font-face(Icons, '#{$fontsPath}/icons', null, null, eot otf woff2 woff ttf svg);
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?k9p3kl');
+  src:  url('../fonts/icomoon.eot?k9p3kl#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?k9p3kl') format('truetype'),
+  url('../fonts/icomoon.woff?k9p3kl') format('woff'),
+  url('../fonts/icomoon.svg?k9p3kl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-many:before {
+  content: "\e900";
+}
+
+
+@font-face {
+  font-family: 'routs-type';
+  //src:  url('../fonts/routs-type.eot?zcwbdi');
+  //src:  url('../fonts/routs-type.eot?zcwbdi#iefix') format('embedded-opentype'),
+  src: url('../fonts/routs-type.ttf?zcwbdi') format('truetype');
+  //url('../fonts/routs-type.woff?zcwbdi') format('woff'),
+  //url('../fonts/routs-type.svg?zcwbdi#routs-type') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.type_ico i, .routes-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'routs-type' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  padding-right: 12px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.type-12:before {
+  content: "\e900";
+}
+.type-9:before {
+  content: "\e909";
+}
+.type-5:before {
+  content: "\e902";
+}
+.type-2:before {
+  content: "\e903";
+}
+.type-11:before {
+  content: "\e904";
+}
+.type-10:before {
+  content: "\e905";
+}
+.type-7:before {
+  content: "\e906";
+}
+.type-4:before {
+  content: "\e907";
+}
+.type-1:before {
+  content: "\e908";
+}
+.type-6:before {
+  content: "\e901";
+}
+.type-8:before {
+  content: "\e90a";
+}
+.type-3:before {
+  content: "\e90b";
+}

@@ -1,0 +1,146 @@
+.search-filter__select-country .selectBox:before {
+  content: "\f3c5";
+}
+
+.search-filter__select-city .selectBox:before {
+  content: "";
+}
+
+.search-filter__select-age .selectBox:before {
+  content: "\f252";
+}
+
+.search-users {
+
+}
+.search-users__top {
+  padding: 40px 0 24px;
+  @include mobile {
+    display: none;
+  }
+}
+.search-users__title {
+  font-size: 22px;
+  float: left;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.search-users__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include mobile {
+    margin: 0 -12px;
+  }
+}
+.search-users__item {
+  position: relative; 
+  padding: 15px 20px;
+  margin-bottom: 45px;
+  // margin-right: 45px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  box-shadow: (1px 0 3px rgba(40,40,40,.06));
+  cursor: pointer;
+  &::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    background-color: $border-color;
+    opacity: .67;
+  }
+  // &:nth-child(5n+5) {
+  //   margin-right: 0;
+  // }
+  @include mobile {
+    margin-bottom: 10px;
+  }
+  &:hover {
+    @include desktop {
+      box-shadow: 0 0 3px $color-green2;
+      border-color: $color-green2;
+    }
+  }
+}
+.search-users__item-photo{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  @include mobile {
+    width: 92px;
+    height: 92px;
+  }
+}
+.search-users__item-name{
+  margin-top: 25px;
+  font-size: 16px;
+  font-size: $color-main;
+  font-weight: bold;
+}
+
+// MEDIA 
+
+@media screen and (max-width: 992px){
+  .header__menu-link{
+    font-size: 13px;
+  }  
+}
+@media screen and (max-width: 768px){
+  .search-users__item{
+    width: 48%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  a.hamburger{
+    z-index: 1;
+  }
+  
+  .header__menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 1s ease;
+  }
+  .open{ 
+    left: 0;  
+  }
+  .header__menu-item{
+    display: block;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+  }
+  .header__menu-link{
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    line-height: 20vh;
+    transition: all .5s ease;
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media screen and (max-width: 482px){
+  .search-users__item{
+    width: 98%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+}
+
+

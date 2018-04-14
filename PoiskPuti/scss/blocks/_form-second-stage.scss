@@ -1,0 +1,128 @@
+.section-search {
+  position: relative;
+}
+.place-container__item{
+  border: 1px solid $border-color;
+  transition: .3s border-color, box-shadow;
+  margin-bottom: 38px;
+  background-color: $white;
+  &:hover {
+    box-shadow: 0 0 3px $color-green2;
+    border-color: $color-green2;
+    .controls-items{
+      opacity: 1;
+    }
+  }
+}
+.place-container__item-info{
+  padding: 25px 17px 8px 17px;
+}
+.place-container__item-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.place-container__item-title{
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2.7px;
+  font-family: $font-main;
+  color: #575757;
+}
+.place-container__item-price{
+  font-size: 22px;
+  letter-spacing: .6px;
+  margin-right: 4px;
+  margin-top: -10px;
+  .icon-many{
+    font-size: 29px;
+    margin-right: 10px;
+  }
+  .place-container__item-price-cost{
+    color: $color-green2;
+  }
+}
+.place-container__item-center{
+  color: #575757;
+  font-size: 17px;
+  letter-spacing: 0.6px;
+  margin-bottom: 25px;
+}
+.place-container__item-bottom{
+  position: relative;
+}
+.place-container__item-rest{
+  width: 100%;
+  padding: 0 42px
+}
+.place-container__item-rests {
+  height: 51px;
+  background-color: $color-green2;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  margin-left: -1px;
+  margin-right: -1px;
+  white-space: nowrap;
+  overflow: hidden;
+  .place-container__item-rests-title{
+    font-size: 16px;
+    color: $white;
+  }
+  i {
+    font-family: "routs-type";
+    color: $white;
+    font-size: 23px;
+    font-style: normal;
+    padding-left: 5px;
+  }
+}
+.place-container__item-dates{
+  font-size: 18px;
+  letter-spacing: 1.1px;
+  margin-bottom: 9px;
+}
+.place-container__item-dates-duration,
+.place-container__item-dates-date{
+  color: $color-green2;
+  letter-spacing: .6px;
+}
+.controls-items{
+  position: absolute;
+  display: flex;
+  font-size: 16px;
+  right: -7px;
+  opacity: 0;
+  bottom: -2px;
+  justify-content: center;
+  transition: 0.3s;
+  &>a{
+    margin-right: 16px;
+    color:#887037;
+  }
+  svg{
+    margin-right: 6px;
+  }
+}
+.control-title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 11px;
+  font-size: 16px;
+  color:#887037;
+}
+.control-title-subtitle{
+  font-size: 25px;
+  color: #000;
+}
+.control-title-add{
+  font-size: 16px;
+  color:#887037;
+  svg{
+    font-size: 18px;
+    margin-right: 3px;
+  }
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1320">
+	<title>ПОИСК ПУТИ</title>
+	<!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/styles.min.css">
+	<link rel="stylesheet" type="text/css" href="css/all-users.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=cyrillic" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+	integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+	crossorigin="anonymous"></script>
+	<script>
+		FontAwesomeConfig = { searchPseudoElements: true };
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="page-main-container">
+		<header class="header">
+			<div class="page-wrapper header__wrapper">
+				<a href="#" class="hamburger">
+					<span class="hamburger__inner">
+						<span>Меню</span>
+					</span>
+				</a>
+				<a href="/" class="header__logo">
+					<img src="img/logo.svg" width="275" class="header__logo-img" alt="ПОИСК ПУТИ"/>
+				</a>
+				<ul class="header__menu">
+					<li class="header__menu-item">
+						<a href="#" class="header__menu-link header__menu-link_active">Маршруты</a>
+					</li>
+					<li class="header__menu-item">
+						<a class="header__menu-link" href="#">Попутчики</a>
+					</li>
+					<li class="header__menu-item">
+						<a class="header__menu-link" href="#">Инструкторы</a>
+					</li>
+					<li class="header__menu-item">
+						<a class="header__menu-link" href="#">Места Отдыха</a>
+					</li>
+					<li class="header__menu-item">
+						<a class="header__menu-link" href="#">Статьи</a>
+					</li>
+				</ul>
+				<div class="header__right">
+					<div class="header__auth">
+						<a href="#" class="header__auth-link">Войти<i class="fas fa-user-circle"></i></a>
+					</div>
+					<form action="#" class="search-input">
+						<input class="search-input__input" type="text" placeholder="Поиск по сайту...">
+						<button class="search-input__btn" type="button">Искать<i class="fa fa-search"></i></button>
+					</form>
+				</div>
+			</div>
+		</header>
+		<main class="content-container">
+			<section class="section-search">
+				<div class="section-img-bg">
+					<picture>
+						<source media="(max-width: 480px)" srcset="img/portfolio/main/header-1_mobile.jpg 480w">
+							<source media="(max-width: 1024px)" srcset="img/header-1_tablet.jpg 1024w">
+								<img class="section-img-bg__img" src="img/header-1.jpg">
+							</picture>
+							<div class="section-img-bg__meta background_opacity_gray">
+								<div class="section-img-bg__meta-text"><span class="icon-circle icon-circle_green"><i class="fas fa-image"></i></span>На фото: г.Кировск-Большая гора</div>
+								<div class="section-img-bg__meta-text"><span class="icon-circle icon-circle_green"><i class="fas fa-map-marker-alt"></i></span>Округ: Дальне-восточный </div>
+								<div class="section-img-bg__meta-text"><span class="icon-circle icon-circle_green"><i class="fas fa-map"></i></span>Регион: Камчатский</div>
+							</div>
+						</div>
+						<div class="search-filter">
+							<div class="page-wrapper page-wrapper_padding">
+								<form class="search-filter__form">
+									<div class="search-filter__select search-filter__select-country">
+										<select name="" id="select1" class="customize">
+											<option value="0" selected="selected" data-skip="1">Страна</option>                          
+											<option value="1" data-html-text="Россия">Россия</option>
+											<option value="2" data-html-text="Украина">Украина</option>
+											<option value="3" data-html-text="Беларусь">Беларусь</option>
+											<option disabled data-skip="1"><input type="hidden" class="search-filter__select-input"><a href="#" class="search-filter__select-input_link"><i class="fa fa-search"></i></a></option>
+										</select>
+									</div>
+									<div class="search-filter__select search-filter__select-city">
+										<select name="" id="select2" class="customize">
+											<option value="0" selected="selected" data-skip="1">Город</option>
+											<option value="1" data-html-text="Москва">Москва</option>
+											<option value="2" data-html-text="Санкт-Петербург">Санкт-Петербург</option>
+											<option value="3" data-html-text="Казань">Казань</option>
+											<option disabled data-skip="1"><input type="hidden" class="search-filter__select-input"><a href="#" class="search-filter__select-input_link"><i class="fa fa-search"></i></a></option>
+										</select>
+									</div>
+									<div class="search-filter__select search-filter__select-relax">
+										<select name="" id="select3" class="customize">
+											<option value="0" selected="selected" data-skip="1">Отдых</option>
+											<option value="1" data-image="routes-icon type-1" data-html-text="Пеший">Пеший</option>
+											<option value="1" data-image="routes-icon type-2" data-html-text="Велосипедный">Велосипедный</option>
+											<option value="1" data-image="routes-icon type-3" data-html-text="Снегоходный">Снегоходный</option>
+											<option value="1" data-image="routes-icon type-4" data-html-text="Охота">Охота</option>
+											<option value="1" data-image="routes-icon type-5" data-html-text="Беговой">Беговой</option>
+											<option value="1" data-image="routes-icon type-6" data-html-text="Водный">Водный</option>
+											<option value="1" data-image="routes-icon type-7" data-html-text="Лыжный">Лыжный</option>
+											<option value="1" data-image="routes-icon type-8" data-html-text="Рыбалка">Рыбалка</option>
+											<option value="1" data-image="routes-icon type-9" data-html-text="Пещерный">Пещерный</option>
+											<option value="1" data-image="routes-icon type-10" data-html-text="Конный">Конный</option>
+											<option value="1" data-image="routes-icon type-11" data-html-text="Горнолыжный">Горнолыжный</option>
+											<option value="1" data-image="routes-icon type-12" data-html-text="Квадроцикл">Квадроцикл</option>
+										</select>
+									</div>
+									<div class="search-filter__select search-filter__select-age">
+										<select name="" id="select4" class="customize">
+											<option value="0" selected="selected" data-skip="1">Возраст</option>
+											<option value="1" data-html-text=""></option>
+											<option value="2" disabled data-skip="1"> <p>
+												<label for="amount"></label>
+												<input type="text" id="amount" readonly style="border:0; color:#888888; font-weight:bold; width: 100%;position: absolute;top: 47px;text-align: center;display:none;">
+											</p>
+											<div id="slider-range" style="display:none;"></div></option>
+										</select>
+									</div>
+									<button type="submit" class="button search-filter__button">Показать</button>
+								</form>
+								<a href="#" class="clearForm search-filter__clear-link icon-circle icon-circle_green"><i class="fas fa-times"></i></a>
+							</div>
+						</div>
+					</section>
+					<section class="search-users">
+						<div class="page-wrapper page-wrapper_padding">
+							<div class="search-users__top clearfix">
+								<div class="search-users__title">Найдено пользователей: (5 из 23)</div>
+								<div class="sort-users">
+									<div class="form-checkbox__photo">
+										<input id="photo" type="checkbox" class="checkbox" />
+										<label for="photo"><span>С фотографией</span></label>
+									</div>
+									<div class="sort-users__item">
+										<div class="sort-users__label"><i class="fas fa-user"></i><span>Пол:</span></div>
+										<a href="#" class="sort-results__link"><span>Выбрать</span></a>
+										<ul class="sort-results__dropdown">
+											<li class="sort-results__dropdown-item"><span>Выбрать</span></li>
+											<li class="sort-results__dropdown-item"><a href="#"><i class="fas fa-male"></i>Мужской</a></li>
+											<li class="sort-results__dropdown-item"><a href="#"><i class="fas fa-female"></i>Женский</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="search-users__list">
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="https://placehold.it/256x256" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div>
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div> 
+								<div class="search-users__item">
+									<div class="search-users__item-photo" style="background-color: #777"><img src="" alt=""></div>
+									<div class="search-users__item-name">Имя Фамилия</div>
+								</div>   
+							</div>
+
+							<div class="pagination">
+								<a href="#" class="pagination__link pagination__link_prev"><i class="fa fa-angle-left"></i></a>
+								<a href="#" class="pagination__link pagination__link_active">1</a>
+								<a href="#" class="pagination__link">2</a>
+								<a href="#" class="pagination__link">3</a>
+								<a href="#" class="pagination__link pagination__link_next"><i class="fa fa-angle-right"></i></a>
+							</div>
+
+						</div>
+
+					</section>
+				</main>
+				<footer class="footer">
+					<div class="page-wrapper page-wrapper_padding footer__wrapper">
+						<div class="footer__left">
+							<img src="img/logo-white.svg" width="160" class="footer__logo"/>
+							<div class="footer__apps">
+								<span class="footer__apps-title">Мобильное приложение:</span>
+								<div class="footer__apps-img">
+									<img src="img/apps2.jpg" class="footer__logo"/>
+									<!--<a href="#" class="footer__apps-link footer__apps-link-android"></a>-->
+									<!--<a href="#" class="footer__apps-link footer__apps-link-ios"></a>-->
+								</div>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__menu-list">
+								<div class="footer__menu-title">О НАС</div>
+								<ul class="footer__menu-links">
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">О проекте</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Карта сайта</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Благотворительность</a></li>
+								</ul>
+							</div>
+							<div class="footer__menu-list">
+								<div class="footer__menu-title">Полезное</div>
+								<ul class="footer__menu-links">
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Новости</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Статьи</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Справки</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Форум</a></li>
+								</ul>
+							</div>
+							<div class="footer__menu-list">
+								<div class="footer__menu-title">Права</div>
+								<ul class="footer__menu-links">
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Условия пользования</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Права</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Правила сайта</a></li>
+								</ul>
+							</div>
+							<div class="footer__menu-list">
+								<div class="footer__menu-title">Обратная связь</div>
+								<ul class="footer__menu-links">
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Нашли ошибку</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Тех.Поддержка</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Добавить заведение</a></li>
+									<li class="footer__menu-item"><a href="#" class="footer__menu-link">Рекламодателям</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__right">
+							<div class="footer__social">
+								<a href="mailto:poisk@mail.ru" class="footer__mail-link"><i class="fa fa-envelope"></i>poisk@mail.ru</a>
+								<div class="footer__social-title">Мы в социальных сетях:</div>
+								<ul class="footer__social-list">
+									<li class="footer__social-item"><a href="#" class="footer__social-link footer__social-in"><i
+										class="fab fa-instagram"></i></a></li>
+										<li class="footer__social-item"><a href="#" class="footer__social-link footer__social-vk"><i
+											class="fab fa-vk"></i></a></li>
+											<li class="footer__social-item"><a href="#" class="footer__social-link footer__social-od"><i
+												class="fab fa-odnoklassniki"></i></a></li>
+												<li class="footer__social-item"><a href="#" class="footer__social-link footer__social-fb"><i
+													class="fab fa-facebook-f"></i></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="footer__copyright">
+										<span>PoiskPuti.ru © Все права защищены</span>
+									</div>
+								</footer>
+							</div>
+
+							<script src="js/jquery-ui.min.js"></script>
+							<script src="js/min/all.min.js"></script>
+							<script src="js/all-user.js"></script>
+							<script src="js/owl.carousel.js"></script>
+						</body>
+						</html>

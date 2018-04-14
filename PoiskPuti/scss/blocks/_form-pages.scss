@@ -1,0 +1,268 @@
+.form-head {
+  margin: 0 17.3%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &:before {
+    content: "";
+    border-bottom: 2px dotted $border-color;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 50%;
+  }
+}
+.form-head__img {
+  background-color: $white;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+.form-container {
+  margin-bottom: 42px;
+  position: relative;
+  @include mobile {
+    margin-bottom: 10px;
+    &>div{
+      margin-bottom: 22px;
+    }
+  }
+}
+.form-label {
+  font-size: 22px;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+}
+.form-label__icon {
+  margin-right: 8px;
+  color: $color-green;
+  min-width: 22px;
+}
+.form-label_required {
+  &:after {
+    content: "*";
+    vertical-align: super;
+    margin-top: -10px;
+    margin-left: 4px;
+  }
+}
+.form-label__note {
+  letter-spacing: 0.6px;
+  font-size: 16px;
+  color: $color-gray;
+  order: 2;
+  margin-left: 8px;
+  a {
+    font-size: 14px;
+    color: $light-brown;
+    &:hover {
+      color: $color-green;
+    }
+  }
+}
+.form__upload-photo {
+  display: flex;
+  justify-content: space-between;
+  @include mobile{
+    .form__upload-file{
+      width: 55.7%;
+      flex-basis: 55.7%;
+    }
+    .upload-button_btn{
+      padding-left: 0;
+    }
+    .button_gray{
+      min-width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+.form__upload-photo-preview {
+  width: 40%;
+  flex-basis: 40%;
+}
+.form__upload-file {
+  width: 48.7%;
+  flex-basis: 48.7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form__upload-file_area {
+  width: 100%;
+  flex-basis: 100%;
+  height: 220px;
+  background-color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s opacity;
+  &:hover {
+    opacity: 0.7;
+  }
+  + input[type="file"] {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.form-upload-area__text {
+  color: #5e5e5e;
+  cursor: default;
+  svg, i {
+    color: #b7b6b6;
+    font-size: 64px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+.form__upload-note {
+  font-size: 14px;
+  span {
+    font-size: 12px;
+  }
+}
+.form__cover-photo {
+  width: 100%;
+  height: 317px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form__cover-photo-img {
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.form-input__input {
+  width: 100%;
+  background-color: $input-bg;
+}
+.form-label__tooltip {
+  order: 1;
+  vertical-align: super;
+  font-size: 18px;
+  margin-top: -18px;
+  margin-left: 4px;
+  color: $color-green2;
+  &:hover {
+    color: lighten($color-green2, 2%);
+  }
+  &:active {
+    color: darken($color-green2, 2%);
+  }
+}
+.form-checkbox-month {
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  span {
+    color: $color-green;
+    font-size: 16px;
+    margin-top: 16px;
+  }
+}
+.form-rest-type {
+  margin: 0 -15px;
+  padding: 11px 55px;
+  background-color: $color-green2;
+  @include mobile {
+    justify-content: flex-start;
+  }
+  .routes-icon {
+    font-size: 22px;
+    vertical-align: baseline;
+    color: $white;
+    margin-left: 10px;
+  }
+}
+.form-rest-type__item {
+  @include mobile {
+    flex-basis: 33.333%;
+  }
+}
+.form-input {
+  position: relative;
+}
+.form-input_twiced {
+  display: flex;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    width: 1px;
+    background-color: $border-color;
+    left: 0;
+    right: 0;
+    margin: auto;
+    order: 1;
+  }
+  > .form-input__input {
+    &:first-of-type {
+      border-right: 0;
+      order: 0;
+    }
+    &:last-of-type {
+      border-left: 0;
+      order:2;
+    }
+  }
+}
+.form-input__icon-add {
+  min-width: 21px;
+  min-height: 21px;
+  color: $white;
+  background: $color-green;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 1px 6px;
+  max-width: 21px;
+  max-height: 21px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+.form-input__icon-remove {
+  @extend .form-input__icon-add;
+  background: #7d7d7d;
+}
+.form-subtitle {
+  font-size: 22px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.form-map {
+  iframe {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+.form-submit {
+  text-align: center;
+  .button {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+  @include mobile{
+    margin-top: 32px;
+    margin-bottom: 30px;
+  }
+}

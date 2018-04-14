@@ -1,0 +1,63 @@
+.page-main-container {
+  position: relative;
+  overflow: hidden;
+}
+.content-container {
+  background-color: $color-lightgray;
+  min-height: 100vh;
+  padding: 95px 0 248px;
+  @include mobile {
+    padding: 47px 0 136px;
+  }
+}
+.content-container_white {
+  background-color: $white;
+}
+.page-wrapper {
+  max-width: $page-wrapper;
+  margin: 0 auto;
+  width: 100%;
+}
+.page-wrapper_padding {
+  padding-left: 15px;
+  padding-right: 15px;
+  @include mobile {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.page-layout {
+  margin: 24px 0 100px;
+  padding: 0 15px;
+  @extend .clearfix;
+}
+.page-layout_white {
+  background-color: $white;
+  box-shadow: 0 0 3px transparentize($color-main, .94);
+}
+.page-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 60px 0 0;
+}
+.page-full-width-bg {
+  position: relative;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    border-top: inherit;
+    border-bottom: inherit;
+  }
+  &:after {
+    left: 100%;
+  }
+  &:before {
+    right: 100%;
+  }
+}
