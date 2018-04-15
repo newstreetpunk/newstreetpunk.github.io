@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1320">
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="stylesheet" type="text/css" href="styles.css"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&amp;subset=cyrillic" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+          integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+          crossorigin="anonymous"></script>
+  <script>
+      FontAwesomeConfig = { searchPseudoElements: true };
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="page-main-container">
+  <header class="header">
+      <div class="page-wrapper header__wrapper">
+          <a href="/" class="header__logo">
+              <img src="img/logo.svg" width="275" class="header__logo-img" alt="ПОИСК ПУТИ"/>
+          </a>
+          <ul class="header__menu">
+              <li class="header__menu-item">
+                  <a href="#" class="header__menu-link header__menu-link_active">Маршруты</a>
+              </li>
+              <li class="header__menu-item">
+                  <a class="header__menu-link" href="#">Попутчики</a>
+              </li>
+              <li class="header__menu-item">
+                  <a class="header__menu-link" href="#">Инструкторы</a>
+              </li>
+              <li class="header__menu-item">
+                  <a class="header__menu-link" href="#">Места Отдыха</a>
+              </li>
+          </ul>
+          <div class="header__right">
+              <div class="header__auth">
+                  <a href="#" class="header__auth-link">Войти<i class="fas fa-user-circle"></i></a>
+              </div>
+              <form action="#" class="search-input">
+                  <input class="search-input__input" type="text" placeholder="Поиск по сайту...">
+                  <button class="search-input__btn" type="button">Искать<i class="fa fa-search"></i></button>
+              </form>
+          </div>
+      </div>
+  </header>
+
+
+<main class="content-container content-container_white">
+    <div class="section-img-bg section-img-bg_overlay_remove section-img-bg_size_l">
+        <picture>
+            <source media="(max-width: 480px)" srcset="img/flame_and_ice.jpg 480w">
+            <source media="(max-width: 1024px)" srcset="img/flame_and_ice.jpg 1024w">
+            <img class="section-img-bg__img" src="img/flame_and_ice.jpg">
+        </picture>
+        <div class="section-img-bg__title section-img-bg__title_centered">
+            <div class="section-img-bg__title-text">МАРШРУТ № 5 ОГОНЬ И ЛЁД</div>
+        </div>
+    </div>
+
+    <div class="breadcrumbs">
+        <div class="page-wrapper page-wrapper_padding">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link breadcrumbs__link"><i class="fas fa-home"></i>Главная</a></li>
+                <li class="breadcrumbs__item"><span>Маршруты</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="about-block">
+        <div class="page-wrapper page-wrapper_padding">
+            <div class="about-block__title">О маршруте</div>
+            <p class="about-block__text">
+                Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется онвеб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-options page-full-width-bg">
+        <div class="page-wrapper page-wrapper_padding">
+            <div class="columns columns_align_start">
+                <div class="columns__item_quart">
+                    <div class="text-line-option"><i class="fas fa-map-marker-alt"></i><span class="text-line-option__l">Округ: </span>Дальне-восточный, Сибирьский</div>
+                    <div class="text-line-option"><i class="fas fa-map"></i><span class="text-line-option__l">Регион: </span>Камчатский, Краснодарский, Краснодарский</div>
+                </div>
+                <div class="columns__item_quart">
+                    <div class="text-line-option"><i class="fas fa-compass"></i><span class="text-line-option__l">Тип маршрута: </span>Туристический<span class="what">?<div class="modal">Крупнейшая социальная сеть в Европе. Сайт доступен на более чем 90 языках; особенно популярен среди русскоязычных пользователей.</div></span></div>
+                    <div class="text-line-option"><i class="fas fa-phone"></i><span class="text-line-option__l">Сотовая связь: </span>На всём пути</div>
+                    <div class="text-line-option"><i class="fas fa-tint"></i><span class="text-line-option__l">Вода: </span>Питьевая вода</div>
+                </div>
+                <div class="columns__item_quart">
+                    <div class="text-line-option"><i class="fas fa-road"></i><span class="text-line-option__l">Длина (м): </span>12 345</div>
+                    <div class="text-line-option"><i class="fas fa-hourglass-half"></i><span class="text-line-option__l">Длительность: </span>10 часов</div>
+                    <div class="text-line-option"><i class="fas fa-bolt"></i><span class="text-line-option__l">Сложность: </span>5<span class="what">?<div class="modal">Крупнейшая социальная сеть в Европе. Сайт доступен на более чем 90 языках; особенно популярен среди русскоязычных пользователей.</div></span></div>
+                </div>
+                <div class="columns__item_quart">
+                    <div class="text-line-option"><i class="fas fa-money-bill-alt"></i><span class="text-line-option__l">Плата: </span>Особые условия</div>
+                    <div class="text-line-option text-line-option__right"><i class="fas fa-road"></i><span class="text-line-option__l">Вид маршрута: </span>Линейный<span class="what">?<div class="modal">Крупнейшая социальная сеть в Европе. Сайт доступен на более чем 90 языках; особенно популярен среди русскоязычных пользователей.</div></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-author page-wrapper">
+      <span class="about-author__date"><span class="text-line-option__l"><i class="far fa-calendar-alt"></i> Добавлен</span>: 25.12.20</span>
+      <span class="about-author__user"><span class="text-line-option__l"><i class="fas fa-user"></i> Автор</span>: <a href="#">Государственный биосферный кавказский заповедник</a></span>
+    </div>
+
+    <div class="form-rest-type page-full-width-bg">
+        <div class="page-wrapper">
+            <span class="form-rest-type__label">Виды отдыха</span>
+            <i class="routes-icon type-3"></i>
+            <i class="routes-icon type-2"></i>
+            <i class="routes-icon type-4"></i>
+            <i class="routes-icon type-1"></i>
+            <i class="routes-icon type-5"></i>
+            <i class="routes-icon type-6"></i>
+            <i class="routes-icon type-7"></i>
+            <i class="routes-icon type-8"></i>
+            <i class="routes-icon type-9"></i>
+            <i class="routes-icon type-10"></i>
+            <i class="routes-icon type-11"></i>
+            <i class="routes-icon type-12"></i>
+        </div>
+    </div>
+
+    <section class="about-content">
+
+      <section class="available-dates page-wrapper">
+        <div class="available-dates__header">
+          <span class="text-line-option__l"><i class="far fa-calendar-alt"></i> Доступные даты:</span>
+          <a href="#" class="available-dates__link_month">Декабрь,</a>
+          <a href="#" class="available-dates__link_month">Январь,</a>
+          <a href="#" class="available-dates__link_month">Март,</a>
+          <a href="#" class="available-dates__link_month">Июнь,</a>
+          <a href="#" class="available-dates__link_month">Июль,</a>
+          <a href="#" class="available-dates__link_month">Август,</a>
+          <a href="#" class="available-dates__link_month">Сентябрь,</a>
+          <a href="#" class="available-dates__link_month">Октябрь,</a>
+          <a href="#" class="available-dates__link_month">Ноябрь,</a>
+          <a href="#" class="available-dates__link_month">Февраль,</a>
+          <a href="#" class="available-dates__link_month">Апрель,</a>
+          <a href="#" class="available-dates__link_month">Май</a>
+        </div>
+        <div>
+          <span><span class="text-line-option__l"><i class="fas fa-star"></i> Оценка</span>: 5</span>
+          <span><span class="text-line-option__f"><i class="fas fa-heart"></i></span> Избранное</span>
+        </div>
+      </section>
+
+      <div class="owl-carousel owl-theme page-wrapper">
+          <img src="http://via.placeholder.com/336x233" alt="">
+          <img src="http://via.placeholder.com/336x233" alt="">
+          <img src="http://via.placeholder.com/336x233" alt="">
+          <img src="http://via.placeholder.com/336x233" alt="">
+          <img src="http://via.placeholder.com/336x233" alt="">
+          <img src="http://via.placeholder.com/336x233" alt="">
+          <img src="http://via.placeholder.com/336x233" alt="">
+          <img src="http://via.placeholder.com/336x233" alt="">
+          <img src="http://via.placeholder.com/336x233" alt="">
+          <img src="http://via.placeholder.com/336x233" alt="">
+      </div>
+
+      <section class="about-content">
+
+        <section class="about-content__section page-wrapper">
+          <h1 class="about-content__label">Нитка маршрута<span class="what">?<div class="modal">Крупнейшая социальная сеть в Европе. Сайт доступен на более чем 90 языках; особенно популярен среди русскоязычных пользователей.</div></span></h1>
+          <p class="about-content__text">
+            От г. Петропавловск-Камчатский можно добраться на арендованном автомобиле высокой проходимости до Центрального кордона в парке Налычево
+            <br>
+            Примерно 2-3 часа езды - 50 км.
+          </p>
+        </section>
+
+        <section class="about-content__section page-wrapper">
+          <h1 class="about-content__label">Место стоянок<span class="what">?<div class="modal">Крупнейшая социальная сеть в Европе. Сайт доступен на более чем 90 языках; особенно популярен среди русскоязычных пользователей.</div></span></h1>
+          <p class="about-content__text">
+            От г. Петропавловск-Камчатский можно добраться на арендованном автомобиле высокой проходимости до Центрального кордона в парке Налычево
+            <br>
+            Примерно 2-3 часа езды - 50 км.
+          </p>
+        </section>
+
+        <section class="about-content__section page-wrapper">
+          <h1 class="about-content__label">Схема движения маршрута<span class="what">?<div class="modal">Крупнейшая социальная сеть в Европе. Сайт доступен на более чем 90 языках; особенно популярен среди русскоязычных пользователей.</div></span></h1>
+          <p class="about-content__text">
+            От г. Петропавловск-Камчатский можно добраться на арендованном автомобиле высокой проходимости до Центрального кордона в парке Налычево
+            <br>
+            Примерно 2-3 часа езды - 50 км.
+          </p>
+        </section>
+
+        <section class="about-content__section page-wrapper">
+          <h1 class="about-content__label">Радиальные выходы<span class="what">?<div class="modal">Крупнейшая социальная сеть в Европе. Сайт доступен на более чем 90 языках; особенно популярен среди русскоязычных пользователей.</div></span></h1>
+          <p class="about-content__text">
+            От г. Петропавловск-Камчатский можно добраться на арендованном автомобиле высокой проходимости до Центрального кордона в парке Налычево
+            <br>
+            Примерно 2-3 часа езды - 50 км.
+          </p>
+        </section>
+
+        <section class="about-content__section about-content__section--map">
+          <div class="about-content__map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d443435.0922986362!2d37.84276647165989!3d55.735144727565626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1522106931423" width="600" height="335" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <section class="about-content__section page-wrapper">
+          <h1 class="about-content__label">Как добраться до начала маршрута</h1>
+          <p class="about-content__text">
+            От г. Петропавловск-Камчатский можно добраться на арендованном автомобиле высокой проходимости до Центрального кордона в парке Налычево
+            <br>
+            Примерно 2-3 часа езды - 50 км.
+          </p>
+        </section>
+
+        <section class="about-content__section page-wrapper">
+          <h1 class="about-content__label">Правила и рекомендации<span class="what">?<div class="modal">Крупнейшая социальная сеть в Европе. Сайт доступен на более чем 90 языках; особенно популярен среди русскоязычных пользователей.</div></span></h1>
+          <p class="about-content__text">
+            От г. Петропавловск-Камчатский можно добраться на арендованном автомобиле высокой проходимости до Центрального кордона в парке Налычево
+            <br>
+            Примерно 2-3 часа езды - 50 км.
+          </p>
+        </section>
+      </section>
+    </section>
+
+    <!-- media -->
+    <section class="about-media">
+
+      <section class="about-media__section">
+        <div class="page-wrapper">
+          <div class="about-media__header">
+            <div class="about-media__label">Дневники путешествий</div>
+            <div class="about-media__details">
+              <a href="#">Все дневники →</a>
+            </div>
+          </div>
+          <div class="about-media__container">
+            <div class="about-media__item about-media__diaries">
+              <img src="./img/mountandbear.png" alt="">
+              <div class="about-media__item-description">
+                Каждый разработчик знает что такое текст-рыба.
+              </div>
+            </div>
+            <div class="about-media__item about-media__diaries">
+              <img src="./img/mountandbear.png" alt="">
+              <div class="about-media__item-description">
+                Каждый разработчик знает что такое текст-рыба.
+              </div>
+
+            </div>
+            <div class="about-media__item about-media__diaries">
+              <img src="./img/mountandbear.png" alt="">
+              <div class="about-media__item-description">
+                Каждый разработчик знает что такое текст-рыба.
+              </div>
+
+            </div>
+            <div class="about-media__item about-media__add-photo">
+
+                <span class="about-media__add-photo_icon">
+                  <i class="fas fa-link"></i>
+                </span>
+                <p class="about-media__add-photo_label">Поделитесь фот и видео впечатлениями в своем дневнике</p>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="about-media__section page-wrapper">
+
+          <div class="about-media__header">
+            <div class="about-media__label">Места отдыха рядом</div>
+            <div class="about-media__details">
+              <a href="#">Все места →</a>
+            </div>
+          </div>
+        
+          <div class="about-media__container">
+            <div class="about-media__item">
+              <img src="./img/places.png" alt="">
+              <div class="about-media__item-content">
+                <div class="about-media__item-label">
+                  this is photoshop's
+                </div>
+                <div class="about-media__item-colum">
+                  <div class="about-media__item-locating">
+                    <i class="fas fa-map"></i> Камчатский
+                  </div>
+                  <div class="about-media__item-type">
+                    <i class="fas fa-home"></i> База-отдыха
+                  </div>
+                  <div class="about-media__item-price">
+                    от 12 000 Р
+                  </div>
+                </div>
+              </div>
+              <div class="form-rest-type about-media__item-bottom">
+                <span class="form-rest-type__label">Виды отдыха</span>
+                <i class="routes-icon type-3"></i>
+                <i class="routes-icon type-2"></i>
+                <i class="routes-icon type-4"></i>
+                <i class="routes-icon type-1"></i>
+              </div>
+            </div>
+            <div class="about-media__item">
+              <img src="./img/places.png" alt="">
+              <div class="about-media__item-content">
+                <div class="about-media__item-label">
+                  this is photoshop's
+                </div>
+                <div class="about-media__item-colum">
+                  <div class="about-media__item-locating">
+                    <i class="fas fa-map"></i> Камчатский
+                  </div>
+                  <div class="about-media__item-type">
+                    <i class="fas fa-home"></i> База-отдыха
+                  </div>
+                  <div class="about-media__item-price">
+                    от 12 000 Р
+                  </div>
+                </div>
+              </div>
+              <div class="form-rest-type about-media__item-bottom">
+                <span class="form-rest-type__label">Виды отдыха</span>
+                <i class="routes-icon type-3"></i>
+                <i class="routes-icon type-2"></i>
+                <i class="routes-icon type-4"></i>
+                <i class="routes-icon type-1"></i>
+              </div>
+            </div>
+            <div class="about-media__item">
+              <img src="./img/places.png" alt="">
+              <div class="about-media__item-content">
+                <div class="about-media__item-label">
+                  this is photoshop's
+                </div>
+                <div class="about-media__item-colum">
+                  <div class="about-media__item-locating">
+                    <i class="fas fa-map"></i> Камчатский
+                  </div>
+                  <div class="about-media__item-type">
+                    <i class="fas fa-home"></i> База-отдыха
+                  </div>
+                  <div class="about-media__item-price">
+                    от 12 000 Р
+                  </div>
+                </div>
+              </div>
+              <div class="form-rest-type about-media__item-bottom">
+                <span class="form-rest-type__label">Виды отдыха</span>
+                <i class="routes-icon type-3"></i>
+                <i class="routes-icon type-2"></i>
+                <i class="routes-icon type-4"></i>
+                <i class="routes-icon type-1"></i>
+              </div>
+            </div>
+            <div class="about-media__item">
+              <img src="./img/places.png" alt="">
+              <div class="about-media__item-content">
+                <div class="about-media__item-label">
+                  this is photoshop's
+                </div>
+                <div class="about-media__item-colum">
+                  <div class="about-media__item-locating">
+                    <i class="fas fa-map"></i> Камчатский
+                  </div>
+                  <div class="about-media__item-type">
+                    <i class="fas fa-home"></i> База-отдыха
+                  </div>
+                  <div class="about-media__item-price">
+                    от 12 000 Р
+                  </div>
+                </div>
+              </div>
+              <div class="form-rest-type about-media__item-bottom">
+                <span class="form-rest-type__label">Виды отдыха</span>
+                <i class="routes-icon type-3"></i>
+                <i class="routes-icon type-2"></i>
+                <i class="routes-icon type-4"></i>
+                <i class="routes-icon type-1"></i>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="about-media__section">
+        <div class="page-wrapper">
+          <div class="about-media__header">
+            <div class="about-media__label">Инструктор в этом регионе</div>
+            <div class="about-media__details">
+              <a href="#">Все услуги →</a>
+            </div>
+          </div>
+          <div class="about-media__container about-media__layout-services">
+
+            <div class="about-media__group">
+              <div class="about-media__item about-media__item-instructors">
+                <div class="about-media__item-content">
+                  <div class="about-media__item-header">
+                    THIS PHOTOSHOP VERSION OF LOREM IPSUM
+                  </div>
+                  <div class="about-media__item-main">
+                    <div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+                    <div class="about-media__item-main-features">
+                      <div class="about-media__item-main-feature">
+                        <i class="fab fa-fort-awesome"></i> Компания: <a href="#">"Эльбрус"</a>
+                      </div>
+                      <div class="about-media__item-main-feature">
+                        <i class="fas fa-star"></i> Оценка: <a href="#">нет</a>
+                      </div>
+                      <div class="about-media__item-main-feature">
+                        <i class="fas fa-map-marker-alt"></i> Округ: <a href="#">Дальне-восточный</a>
+                      </div>
+                      <div class="about-media__item-main-feature">
+                        <i class="fas fa-map"></i> Регион: <a href="#">Камчатский</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-rest-type about-media__item-bottom">
+                  <span class="form-rest-type__label">Виды отдыха</span>
+                  <i class="routes-icon type-3"></i>
+                  <i class="routes-icon type-2"></i>
+                  <i class="routes-icon type-4"></i>
+                  <i class="routes-icon type-1"></i>
+                </div>
+              </div>
+              <div class="about-media__item about-media__item-instructors">
+                  <div class="about-media__item-content">
+                    <div class="about-media__item-header">
+                      THIS PHOTOSHOP VERSION OF LOREM IPSUM
+                    </div>
+                    <div class="about-media__item-main">
+                      <div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+                      <div class="about-media__item-main-features">
+                        <div class="about-media__item-main-feature">
+                          <i class="fab fa-fort-awesome"></i> Компания: <a href="#">"Эльбрус"</a>
+                        </div>
+                        <div class="about-media__item-main-feature">
+                          <i class="fas fa-star"></i> Оценка: <a href="#">нет</a>
+                        </div>
+                        <div class="about-media__item-main-feature">
+                          <i class="fas fa-map-marker-alt"></i> Округ: <a href="#">Дальне-восточный</a>
+                        </div>
+                        <div class="about-media__item-main-feature">
+                          <i class="fas fa-map"></i> Регион: <a href="#">Камчатский</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="form-rest-type about-media__item-bottom">
+                  <span class="form-rest-type__label">Виды отдыха</span>
+                  <i class="routes-icon type-3"></i>
+                  <i class="routes-icon type-2"></i>
+                  <i class="routes-icon type-4"></i>
+                  <i class="routes-icon type-1"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-media__group ">
+              <div class="about-media__item about-media__item-instructors">
+                <div class="about-media__item-content">
+                  <div class="about-media__item-header">
+                    THIS PHOTOSHOP VERSION OF LOREM IPSUM
+                  </div>
+                  <div class="about-media__item-main">
+                    <div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+                    <div class="about-media__item-main-features">
+                      <div class="about-media__item-main-feature">
+                        <i class="fab fa-fort-awesome"></i> Компания: <a href="#">"Эльбрус"</a>
+                      </div>
+                      <div class="about-media__item-main-feature">
+                        <i class="fas fa-star"></i> Оценка: <a href="#">нет</a>
+                      </div>
+                      <div class="about-media__item-main-feature">
+                        <i class="fas fa-map-marker-alt"></i> Округ: <a href="#">Дальне-восточный</a>
+                      </div>
+                      <div class="about-media__item-main-feature">
+                        <i class="fas fa-map"></i> Регион: <a href="#">Камчатский</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-rest-type about-media__item-bottom">
+                  <span class="form-rest-type__label">Виды отдыха</span>
+                  <i class="routes-icon type-3"></i>
+                  <i class="routes-icon type-2"></i>
+                  <i class="routes-icon type-4"></i>
+                  <i class="routes-icon type-1"></i>
+                </div>
+              </div>
+              <div class="about-media__item about-media__item-instructors">
+                  <div class="about-media__item-content">
+                    <div class="about-media__item-header">
+                      THIS PHOTOSHOP VERSION OF LOREM IPSUM
+                    </div>
+                    <div class="about-media__item-main">
+                      <div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+                      <div class="about-media__item-main-features">
+                        <div class="about-media__item-main-feature">
+                          <i class="fab fa-fort-awesome"></i> Компания: <a href="#">"Эльбрус"</a>
+                        </div>
+                        <div class="about-media__item-main-feature">
+                          <i class="fas fa-star"></i> Оценка: <a href="#">нет</a>
+                        </div>
+                        <div class="about-media__item-main-feature">
+                          <i class="fas fa-map-marker-alt"></i> Округ: <a href="#">Дальне-восточный</a>
+                        </div>
+                        <div class="about-media__item-main-feature">
+                          <i class="fas fa-map"></i> Регион: <a href="#">Камчатский</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="form-rest-type about-media__item-bottom">
+                  <span class="form-rest-type__label">Виды отдыха</span>
+                  <i class="routes-icon type-3"></i>
+                  <i class="routes-icon type-2"></i>
+                  <i class="routes-icon type-4"></i>
+                  <i class="routes-icon type-1"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="about-media__section about-media__layout-routes page-wrapper">
+        <div class="about-media__header">
+          <div class="about-media__label">Маршруты рядом</div>
+          <div class="about-media__details">
+            <a href="#">Все маршруты →</a>
+          </div>
+        </div>
+        <div class="about-media__container">
+
+          <div class="about-media__item about-media__item-routes">
+            <div class="about-media__item-main">
+              <div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+              <div class="about-media__item-main-features about-media__item-main-features__route">
+                <div class="about-media__item-main-feature">
+                  <i class="fas fa-bolt"></i> Сложность: <a href="#">2</a>
+                </div>
+                <div class="about-media__item-main-feature">
+                  <i class="fas fa-clock"></i> Длительность: <a href="#">3 дня</a>
+                </div>
+                <div class="about-media__item-main-feature">
+                  <i class="fas fa-map-marker-alt"></i> Округ: <a href="#">Дальне-восточный</a>
+                </div>
+                <div class="about-media__item-main-feature">
+                  <i class="fas fa-map"></i> Регион: <a href="#">Камчатский</a>
+                </div>
+              </div>
+            </div>
+            <div class="about-media__item_text">
+              <div class="about-media__item_text-header">
+                THIS IS PHOTOSHOP VERSION OF LOREM IPSUM
+              </div>
+              <p class="about-media__item_text-body">
+                Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно.
+              </p>
+            </div>
+            <div class="form-rest-type about-media__item-bottom">
+              <span class="form-rest-type__label">Виды отдыха</span>
+              <i class="routes-icon type-3"></i>
+              <i class="routes-icon type-2"></i>
+              <i class="routes-icon type-4"></i>
+              <i class="routes-icon type-1"></i>
+            </div>
+          </div>
+
+          <div class="about-media__item about-media__item-routes">
+            <div class="about-media__item-main">
+              <div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+              <div class="about-media__item-main-features  about-media__item-main-features__route">
+                <div class="about-media__item-main-feature">
+                  <i class="fas fa-bolt"></i> Сложность: <a href="#">2</a>
+                </div>
+                <div class="about-media__item-main-feature">
+                  <i class="fas fa-clock"></i> Длительность: <a href="#">3 дня</a>
+                </div>
+                <div class="about-media__item-main-feature">
+                  <i class="fas fa-map-marker-alt"></i> Округ: <a href="#">Дальне-восточный</a>
+                </div>
+                <div class="about-media__item-main-feature">
+                  <i class="fas fa-map"></i> Регион: <a href="#">Камчатский</a>
+                </div>
+              </div>
+            </div>
+            <div class="about-media__item_text">
+              <div class="about-media__item_text-header">
+                THIS IS PHOTOSHOP VERSION OF LOREM IPSUM
+              </div>
+              <p class="about-media__item_text-body">
+                Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно.
+              </p>
+            </div>
+            <div class="form-rest-type about-media__item-bottom">
+              <span class="form-rest-type__label">Виды отдыха</span>
+              <i class="routes-icon type-3"></i>
+              <i class="routes-icon type-2"></i>
+              <i class="routes-icon type-4"></i>
+              <i class="routes-icon type-1"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="about__comments page-wrapper">
+        <div class="comments__header">
+
+          <div class="comments__header-main">
+            <h2 class="comments__header-label">
+              Отзывы о маршруте
+              (42)
+            </h2>
+            <div class="comments__header-filters">
+              <span class="comments__header-filters__label"><i class="fas fa-sort-amount-down"></i> Сортировать по:</span>
+              <a href="#">Дате</a>
+              <a class="active" href="#">Оценке</a>
+              <a href="#">Полезности</a>
+            </div>
+          </div>
+
+          <div class="comments__header-action">
+            <a href="#" class="button button_flat button_brown">Добавить отзыв</a>
+          </div>
+        </div>
+
+
+        <div class="comments__content">
+
+          <div class="comment">
+            <img class="comment__avatar" src="./img/ava.jpg" alt="">
+            <div class="comment__right">
+              <div class="comment__header">
+                <span>
+                  <a href="#" class="comment__name">Имя Фамилия</a>
+                  <span class="comment__name-online">
+                    <i class="fas fa-circle"></i>
+                  </span>
+                  <span class="comment__count">
+                    Автор 2 комментариев
+                  </span>
+                </span>
+                <span class="comment__date">
+                  <i class="far fa-calendar-alt"></i> 02.06.2017
+                </span>
+              </div>
+              <p class="comment__text">
+              Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. Разнообразный и богатый опыт новая модель организационной деятельности в значительной степени обуславливает создание форм развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют определения и уточнения существенных финансовых и административных условий. Таким образом укрепление и развитие структуры требуют от нас анализа модели развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.
+              Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Равным образом сложившаяся структура организации позволяет оценить значение систем массового участия. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение направлений прогрессивного развития. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке форм развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют определения и уточнения новых предложений.
+              </p>
+              <div class="comment__footer">
+                <a class="comment__footer-reply" href="#"><i class="fas fa-reply"></i> Ответить</a>
+                <span class="comment__footer-qld">
+                  <span class="comment__footer-question">Полезно?</span>
+                  <span class="comment__footer-like"><i class="fas fa-thumbs-up"></i> 1</span>
+                  <span class="comment__footer-dislike"><i class="fas fa-thumbs-down"></i> 2</span>
+                </span>
+                <span class="comment__footer-rate"><i class="fas fa-star"></i> Оценка: <a href="#">2</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <i class="fas fa-reply comment__reply"></i>
+            <img class="comment__avatar" src="./img/ava.jpg" alt="">
+            <div class="comment__right">
+              <div class="comment__header">
+                <span>
+                  <a href="#" class="comment__name">Имя Фамилия</a>
+                  <span class="comment__name-offline">
+                    <i class="fas fa-circle"></i>
+                  </span>
+                  <span class="comment__count">
+                    Автор 2 комментариев
+                  </span>
+                </span>
+                <span class="comment__date">
+                  <i class="far fa-calendar-alt"></i> 02.06.2017
+                </span>
+              </div>
+              <p class="comment__text">
+              Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. Разнообразный и богатый опыт новая модель организационной деятельности в значительной степени обуславливает создание форм развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют определения и уточнения существенных финансовых и административных условий. Таким образом укрепление и развитие структуры требуют от нас анализа модели развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.
+              Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Равным образом сложившаяся структура организации позволяет оценить значение систем массового участия. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение направлений прогрессивного развития. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке форм развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют определения и уточнения новых предложений.
+              </p>
+              <div class="comment__footer">
+                <a class="comment__footer-reply" href="#"><i class="fas fa-reply"></i> Ответить</a>
+                <span class="comment__footer-qld">
+                  <span class="comment__footer-question">Полезно?</span>
+                  <span class="comment__footer-like"><i class="fas fa-thumbs-up"></i> 1</span>
+                  <span class="comment__footer-dislike"><i class="fas fa-thumbs-down"></i> 2</span>
+                </span>
+                <span class="comment__footer-rate"><i class="fas fa-star"></i> Оценка: <a href="#">2</a></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </section>
+
+    </section>
+
+    <div class="pagination">
+        <a href="#" class="pagination__link pagination__link_prev"><i class="fa fa-angle-left"></i></a>
+        <a href="#" class="pagination__link pagination__link_active">1</a>
+        <a href="#" class="pagination__link">2</a>
+        <a href="#" class="pagination__link">3</a>
+        <a href="#" class="pagination__link pagination__link_next"><i class="fa fa-angle-right"></i></a>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="page-wrapper page-wrapper_padding footer__wrapper">
+        <div class="footer__left">
+            <img src="img/logo-white.svg" width="160" class="footer__logo"/>
+            <div class="footer__apps">
+                <span class="footer__apps-title">Мобильное приложение:</span>
+                <div class="footer__apps-img">
+                    <img src="img/apps2.jpg" class="footer__logo"/>
+                    <!--<a href="#" class="footer__apps-link footer__apps-link-android"></a>-->
+                    <!--<a href="#" class="footer__apps-link footer__apps-link-ios"></a>-->
+                </div>
+            </div>
+        </div>
+        <div class="footer__menu">
+            <div class="footer__menu-list">
+                <div class="footer__menu-title">О НАС</div>
+                <ul class="footer__menu-links">
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">О проекте</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Карта сайта</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Благотворительность</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-list">
+                <div class="footer__menu-title">Полезное</div>
+                <ul class="footer__menu-links">
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Новости</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Статьи</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Справки</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Форум</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-list">
+                <div class="footer__menu-title">Права</div>
+                <ul class="footer__menu-links">
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Условия пользования</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Права</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Правила сайта</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-list">
+                <div class="footer__menu-title">Обратная связь</div>
+                <ul class="footer__menu-links">
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Нашли ошибку</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Тех.Поддержка</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Добавить заведение</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Рекламодателям</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__social">
+                <a href="mailto:poisk@mail.ru" class="footer__mail-link"><i class="fa fa-envelope"></i>poisk@mail.ru</a>
+                <div class="footer__social-title">Мы в социальных сетях:</div>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-in"><i
+                            class="fab fa-instagram"></i></a></li>
+                    <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-vk"><i
+                            class="fab fa-vk"></i></a></li>
+                    <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-od"><i
+                            class="fab fa-odnoklassniki"></i></a></li>
+                    <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-fb"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__copyright">
+        <span>PoiskPuti.ru © Все права защищены</span>
+    </div>
+</footer>
+</div>
+<script src="bundle.js"></script>
+</body>
+</html>
+
