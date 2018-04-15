@@ -3624,7 +3624,4 @@ span.what:hover .modal{
 	}
 }
 @media screen and (max-width: 768px){
-	span.what:hover .modal{
-		display: none;
-	}
 }
