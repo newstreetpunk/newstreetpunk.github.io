@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1320">
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&amp;subset=cyrillic" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+          integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+          crossorigin="anonymous"></script>
+  <script>
+      FontAwesomeConfig = { searchPseudoElements: true };
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="page-main-container">
+  <header class="header">
+      <div class="page-wrapper header__wrapper">
+          <a href="/" class="header__logo">
+              <img src="img/logo.svg" width="275" class="header__logo-img" alt="ПОИСК ПУТИ"/>
+          </a>
+          <ul class="header__menu">
+              <li class="header__menu-item">
+                  <a href="#" class="header__menu-link header__menu-link_active">Маршруты</a>
+              </li>
+              <li class="header__menu-item">
+                  <a class="header__menu-link" href="#">Попутчики</a>
+              </li>
+              <li class="header__menu-item">
+                  <a class="header__menu-link" href="#">Инструкторы</a>
+              </li>
+              <li class="header__menu-item">
+                  <a class="header__menu-link" href="#">Места Отдыха</a>
+              </li>
+              <li class="header__menu-item">
+                  <a class="header__menu-link" href="#">Статьи</a>
+              </li>
+          </ul>
+          <div class="header__right">
+              <div class="header__auth">
+                  <a href="#" class="header__auth-link">Войти<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 299.997 299.997" style="enable-background:new 0 0 299.997 299.997;" xml:space="preserve" width="1em" height="1em"><g><g><path d="M149.996,0C67.157,0,0.001,67.158,0.001,149.997c0,82.837,67.156,150,149.995,150s150-67.163,150-150    C299.996,67.156,232.835,0,149.996,0z M150.453,220.763v-0.002h-0.916H85.465c0-46.856,41.152-46.845,50.284-59.097l1.045-5.587    c-12.83-6.502-21.887-22.178-21.887-40.512c0-24.154,15.712-43.738,35.089-43.738c19.377,0,35.089,19.584,35.089,43.738    c0,18.178-8.896,33.756-21.555,40.361l1.19,6.349c10.019,11.658,49.802,12.418,49.802,58.488H150.453z" fill="#303030"/></g></g></svg></span></a>
+              </div>
+              <form action="#" class="search-input">
+                  <input class="search-input__input" type="text" placeholder="Поиск по сайту...">
+                  <button class="search-input__btn" type="button">Искать<i class="fa fa-search"></i></button>
+              </form>
+          </div>
+      </div>
+  </header>
+
+
+<main class="home">
+	<div class="map__wrap" style="background-image: url(img/map_bg.jpg);">
+		<div class="map__wrap-overlay"></div>
+		<div class="map__wrap-map_russia">
+			<div class="map_russia">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				width="680px" height="348px">
+				<image href="img/karta.png" height="348px" width="680px"/>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=4&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg1" data-class="m0r1-rus-reg1" fill="#FFFFFF" opacity="0"
+					d="M 38,119 L 43,115 L 52,122 L 51,128 L 43,126 Z"/>
+				</a>
+
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=4&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg1" data-class="m0r1-rus-reg1" fill="#FFFFFF" opacity="0"
+					d="M 214,127 L 214,124 L 219,121 L 221,121 L 221,123 L 222,124 L 223,126 L 223,127 L 223,128 L 222,129 L 214,129 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=4&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg1" data-class="m0r1-rus-reg1" fill="#FFFFFF" opacity="0"
+					d="M 245,129 L 238,123 L 237,121 L 236,118 L 235,115 L 236,112 L 239,108 L 241,109 L 243,108 L 244,105 L 247,105 L 249,104 L 251,104 L 252,100 L 254,99 L 258,99 L 264,93 L 266,92 L 269,93 L 271,91 L 280,90 L 282,91 L 282,92 L 285,92 L 288,91 L 290,92 L 292,89 L 294,89 L 297,90 L 298,92 L 297,94 L 297,96 L 295,97 L 293,99 L 289,99 L 285,99 L 281,99 L 277,99 L 274,100 L 272,102 L 268,102 L 265,104 L 261,107 L 258,109 L 256,109 L 254,111 L 251,112 L 250,114 L 248,116 L 247,119 L 247,122 L 247,124 L 248,127 L 248,129 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=4&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg1" data-class="m0r1-rus-reg1" fill="#FFFFFF" opacity="0"
+					d="M 214,197 L 211,197 L 208,196 L 205,194 L 203,193 L 200,192 L 198,193 L 195,193 L 193,191 L 190,189 L 186,188 L 184,188 L 184,190 L 182,192 L 178,192 L 174,191 L 170,191 L 169,188 L 169,185 L 171,183 L 172,180 L 173,178 L 173,176 L 171,174 L 169,174 L 166,174 L 164,175 L 162,176 L 162,178 L 161,181 L 160,183 L 158,182 L 155,181 L 153,180 L 152,178 L 150,176 L 148,174 L 146,173 L 144,171 L 141,171 L 138,170 L 137,171 L 134,170 L 133,167 L 132,165 L 131,163 L 129,162 L 126,161 L 125,158 L 122,159 L 120,157 L 117,155 L 115,154 L 113,153 L 111,152 L 107,152 L 105,153 L 103,151 L 100,151 L 98,150 L 96,148 L 94,149 L 92,150 L 92,152 L 91,154 L 88,154 L 85,154 L 85,152 L 84,150 L 82,150 L 82,147 L 82,145 L 82,142 L 83,140 L 85,138 L 87,135 L 89,134 L 89,132 L 93,131 L 94,128 L 97,126 L 99,125 L 104,125 L 105,123 L 107,123 L 110,124 L 112,124 L 112,120 L 113,119 L 115,118 L 116,118 L 117,118 L 118,118 L 119,119 L 138,119 L 138,110 L 142,110 L 143,106 L 145,106 L 146,103 L 148,102 L 150,100 L 152,100 L 152,100 L 154,99 L 159,92 L 161,91 L 166,91 L 167,89 L 167,84 L 170,80 L 176,80 L 179,81 L 181,83 L 183,83 L 185,83 L 186,85 L 187,87 L 188,89 L 187,90 L 186,91 L 186,92 L 187,94 L 189,97 L 190,99 L 190,106 L 191,108 L 191,110 L 192,112 L 192,117 L 191,119 L 190,122 L 188,123 L 187,124 L 184,125 L 179,125 L 176,123 L 173,121 L 171,119 L 170,117 L 169,114 L 169,110 L 168,105 L 166,103 L 167,111 L 166,114 L 162,116 L 159,119 L 159,122 L 158,123 L 157,126 L 157,129 L 158,130 L 159,131 L 161,131 L 161,129 L 159,127 L 160,124 L 162,122 L 165,121 L 166,122 L 167,124 L 167,127 L 168,129 L 169,133 L 170,134 L 171,133 L 171,129 L 173,127 L 175,126 L 180,127 L 179,128 L 184,128 L 185,127 L 187,127 L 188,128 L 190,130 L 191,131 L 193,131 L 194,129 L 194,124 L 199,122 L 201,121 L 201,117 L 202,117 L 203,118 L 205,119 L 206,121 L 208,123 L 208,127 L 207,129 L 206,130 L 203,130 L 202,128 L 200,129 L 199,131 L 199,133 L 200,134 L 201,136 L 202,136 L 204,134 L 206,133 L 209,132 L 211,133 L 214,134 L 216,133 L 221,133 L 222,134 L 223,136 L 224,135 L 226,134 L 230,134 L 231,134 L 232,137 L 229,137 L 227,139 L 227,140 L 229,140 L 229,141 L 231,140 L 234,141 L 237,142 L 237,143 L 240,143 L 242,142 L 244,141 L 244,142 L 245,145 L 247,146 L 248,146 L 248,139 L 246,136 L 246,133 L 248,131 L 251,133 L 251,136 L 252,139 L 254,141 L 259,144 L 261,145 L 262,148 L 259,149 L 258,151 L 258,154 L 260,155 L 260,157 L 258,158 L 257,160 L 258,162 L 258,164 L 256,165 L 252,166 L 250,167 L 247,169 L 245,171 L 242,172 L 239,174 L 236,175 L 232,174 L 229,175 L 227,177 L 225,179 L 223,183 L 221,186 L 219,189 L 217,192 L 216,195 Z"/>
+				</a>
+
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=5&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg2" data-class="m0r1-rus-reg2" fill="#FFFFFF" opacity="0"
+					d="M 65,302 L 66,303 L 68,304 L 68,302 L 75,302 L 75,288 L 77,289 L 81,285 L 80,276 L 76,269 L 75,266 L 73,263 L 73,256 L 68,250 L 66,249 L 63,249 L 61,250 L 60,252 L 59,255 L 60,257 L 58,257 L 54,258 L 52,257 L 49,257 L 46,262 L 48,264 L 50,266 L 52,269 L 53,272 L 55,274 L 55,277 L 55,278 L 56,279 L 59,279 L 60,281 L 62,282 L 63,283 L 63,285 L 62,286 L 61,287 L 61,289 L 62,290 L 64,292 L 64,293 L 64,296 L 64,299"/>
+				</a>
+
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=9&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg3" data-class="m0r1-rus-reg3" fill="#FFFFFF" opacity="0"
+					d="M 8,231 L 9,233 L 14,232 L 15,233 L 15,238 L 15,241 L 18,241 L 21,241 L 30,234 L 33,234 L 36,234 L 37,240 L 38,246 L 40,247 L 40,255 L 40,258 L 42,258 L 44,259 L 46,260 L 49,255 L 51,255 L 54,257 L 58,256 L 61,248 L 64,248 L 67,249 L 70,251 L 73,254 L 74,256 L 74,259 L 75,262 L 75,264 L 76,266 L 77,268 L 78,271 L 81,274 L 81,276 L 82,277 L 86,276 L 89,273 L 93,274 L 101,275 L 104,270 L 104,259 L 102,253 L 108,246 L 112,246 L 112,241 L 110,238 L 105,234 L 108,231 L 107,228 L 99,221 L 97,218 L 91,218 L 89,220 L 87,221 L 83,222 L 80,221 L 77,221 L 73,221 L 70,224 L 65,224 L 60,223 L 56,225 L 51,226 L 49,228 L 47,231 L 45,231 L 42,229 L 40,227 L 36,226 L 34,226 L 33,227 L 31,226 L 28,223 L 26,222 L 20,222 L 16,221 L 14,222 L 12,224 L 11,226 L 9,228 Z"/>
+				</a>
+
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=8&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg4" data-class="m0r1-rus-reg4" fill="#FFFFFF" opacity="0"
+					d="M 66,199 L 75,218 L 80,220 L 82,221 L 84,221 L 87,221 L 90,219 L 94,218 L 97,218 L 100,216 L 105,214 L 105,214 L 108,212 L 110,211 L 110,205 L 113,202 L 116,199 L 119,199 L 120,197 L 119,195 L 119,193 L 123,193 L 126,193 L 129,191 L 131,189 L 134,189 L 135,190 L 138,188 L 143,188 L 145,186 L 147,187 L 149,190 L 151,190 L 153,188 L 157,188 L 159,186 L 160,184 L 160,182 L 155,181 L 146,172 L 144,171 L 135,170 L 133,168 L 133,164 L 129,163 L 125,160 L 125,158 L 121,158 L 119,155 L 115,154 L 112,152 L 104,153 L 101,151 L 101,151 L 99,151 L 96,148 L 93,149 L 91,152 L 92,153 L 89,154 L 83,155 L 79,157 L 78,160 L 75,163 L 74,166 L 67,166 L 64,170 L 64,177 L 68,181 L 71,184 L 68,186 L 67,191 L 67,193 Z"/>
+				</a>
+
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=3&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg5" data-class="m0r1-rus-reg5" fill="#FFFFFF" opacity="0"
+					d="M 115,251 L 113,246 L 112,241 L 111,237 L 107,235 L 106,233 L 108,231 L 106,228 L 102,224 L 99,221 L 99,218 L 102,215 L 104,214 L 108,213 L 110,212 L 110,209 L 110,205 L 112,202 L 115,200 L 118,199 L 119,198 L 120,197 L 119,194 L 121,193 L 125,193 L 128,191 L 132,189 L 133,190 L 135,189 L 138,187 L 141,188 L 143,188 L 145,186 L 148,187 L 149,189 L 150,190 L 152,188 L 155,188 L 158,188 L 160,186 L 160,184 L 161,179 L 161,179 L 163,176 L 165,174 L 165,174 L 169,174 L 170,174 L 172,175 L 173,178 L 172,180 L 170,183 L 169,186 L 169,186 L 169,189 L 170,191 L 173,191 L 175,191 L 176,191 L 178,192 L 180,192 L 183,192 L 183,190 L 185,187 L 189,188 L 189,188 L 191,189 L 193,191 L 194,193 L 198,193 L 202,193 L 206,194 L 208,195 L 211,196 L 213,196 L 215,197 L 213,201 L 212,203 L 210,205 L 208,207 L 204,207 L 202,209 L 202,213 L 202,217 L 201,220 L 200,222 L 200,222 L 196,222 L 193,223 L 192,224 L 187,226 L 185,228 L 185,231 L 185,235 L 185,235 L 188,236 L 189,237 L 189,237 L 189,240 L 187,241 L 185,242 L 183,242 L 181,240 L 178,239 L 178,241 L 178,241 L 178,245 L 180,247 L 182,247 L 186,247 L 187,249 L 185,250 L 182,251 L 181,252 L 178,254 L 177,258 L 173,260 L 175,262 L 178,263 L 178,267 L 179,270 L 181,273 L 181,273 L 183,276 L 180,281 L 180,281 L 175,282 L 170,281 L 164,278 L 160,273 L 157,269 L 150,269 L 147,266 L 143,262 L 142,257 L 140,253 L 136,251 L 134,248 L 127,247 L 123,247 L 119,250 Z"/>
+				</a>
+
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=7&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg6" data-class="m0r1-rus-reg6" fill="#FFFFFF" opacity="0"
+					d="M 191,257 L 189,258 L 190,259 L 191,260 L 189,261 L 190,262 L 191,264 L 192,265 L 191,266 L 189,267 L 186,264 L 184,264 L 184,266 L 183,268 L 181,269 L 178,268 L 179,264 L 177,262 L 174,262 L 176,258 L 177,257 L 179,254 L 181,253 L 184,252 L 186,250 L 186,248 L 180,247 L 178,245 L 177,242 L 179,240 L 181,240 L 182,242 L 182,242 L 183,243 L 185,242 L 187,241 L 189,239 L 189,236 L 185,234 L 184,231 L 185,229 L 187,227 L 192,224 L 194,223 L 197,222 L 200,221 L 202,219 L 202,216 L 202,214 L 202,212 L 202,212 L 201,210 L 203,208 L 205,208 L 208,206 L 210,205 L 212,202 L 214,198 L 216,195 L 217,192 L 219,189 L 220,187 L 222,185 L 224,182 L 226,179 L 228,176 L 235,176 L 238,175 L 238,175 L 240,174 L 244,171 L 244,171 L 248,168 L 252,167 L 256,166 L 259,164 L 259,162 L 257,160 L 257,158 L 260,157 L 260,157 L 260,155 L 258,154 L 259,150 L 259,150 L 261,148 L 263,149 L 263,151 L 264,153 L 266,156 L 267,159 L 267,159 L 269,160 L 270,158 L 269,155 L 268,153 L 267,150 L 267,147 L 272,142 L 271,140 L 270,137 L 272,135 L 272,135 L 275,135 L 277,134 L 279,133 L 284,126 L 287,124 L 288,122 L 291,121 L 293,122 L 293,125 L 292,126 L 291,127 L 293,128 L 294,129 L 294,131 L 294,133 L 293,134 L 291,137 L 289,139 L 288,141 L 289,143 L 289,146 L 288,149 L 286,152 L 284,154 L 283,157 L 283,160 L 283,161 L 285,163 L 284,167 L 283,169 L 279,172 L 277,174 L 275,176 L 274,178 L 275,179 L 278,179 L 280,177 L 281,175 L 283,173 L 285,172 L 286,168 L 286,164 L 287,162 L 286,158 L 289,151 L 290,149 L 290,145 L 291,140 L 294,137 L 296,136 L 297,133 L 298,130 L 298,130 L 296,129 L 296,127 L 298,126 L 299,127 L 301,128 L 301,130 L 302,132 L 301,135 L 300,137 L 301,138 L 303,135 L 305,134 L 307,135 L 307,135 L 307,136 L 306,138 L 308,140 L 309,142 L 310,143 L 310,145 L 309,147 L 308,148 L 309,150 L 310,151 L 309,153 L 308,156 L 306,158 L 305,160 L 306,162 L 308,164 L 310,166 L 311,166 L 313,168 L 313,170 L 312,173 L 310,176 L 309,177 L 309,179 L 310,183 L 310,185 L 311,187 L 311,189 L 310,191 L 311,193 L 312,195 L 314,197 L 315,199 L 315,200 L 315,200 L 313,203 L 314,204 L 317,205 L 318,207 L 318,210 L 317,212 L 315,213 L 314,215 L 313,216 L 314,217 L 315,219 L 314,221 L 311,223 L 310,224 L 309,226 L 310,227 L 310,229 L 311,230 L 314,231 L 315,233 L 312,234 L 309,236 L 307,237 L 304,235 L 302,236 L 301,238 L 299,238 L 296,237 L 293,236 L 290,235 L 288,234 L 285,232 L 283,232 L 279,231 L 277,233 L 276,235 L 275,237 L 273,239 L 270,241 L 268,242 L 266,244 L 264,245 L 262,247 L 259,248 L 255,248 L 252,247 L 249,247 L 248,245 L 247,243 L 246,241 L 245,242 L 244,244 L 243,246 L 241,248 L 242,249 L 244,251 L 244,253 L 243,254 L 241,255 L 239,256 L 238,258 L 238,261 L 236,263 L 236,265 L 235,267 L 233,266 L 231,264 L 230,262 L 228,262 L 226,262 L 224,263 L 221,263 L 218,263 L 208,263 L 204,261 L 200,260 L 198,260 L 194,259 Z"/>
+				</a>
+
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=6&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg7" data-class="m0r1-rus-reg7" fill="#FFFFFF" opacity="0"
+					d="M 348,79 L 348,76 L 349,76 L 350,73 L 352,72 L 355,71 L 357,72 L 360,73 L 361,74 L 361,77 L 360,79 L 360,81 L 361,82 L 360,85 L 359,86 L 357,86 L 354,86 L 353,84 L 350,82 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=6&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg7" data-class="m0r1-rus-reg7" fill="#FFFFFF" opacity="0"
+					d="M 360,94 L 359,92 L 360,89 L 361,86 L 362,83 L 362,79 L 365,78 L 367,79 L 367,80 L 369,83 L 371,86 L 371,88 L 369,89 L 366,91 L 363,92 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=6&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg7" data-class="m0r1-rus-reg7" fill="#FFFFFF" opacity="0"
+					d="M 366,330 L 364,331 L 355,331 L 351,330 L 347,327 L 347,324 L 345,324 L 342,323 L 335,323 L 331,324 L 321,330 L 319,331 L 315,331 L 313,334 L 308,334 L 306,333 L 306,329 L 304,331 L 301,330 L 298,329 L 296,328 L 296,324 L 293,322 L 292,318 L 290,316 L 287,316 L 285,317 L 279,317 L 278,314 L 277,312 L 275,311 L 275,313 L 274,314 L 272,314 L 270,313 L 270,309 L 269,306 L 268,304 L 268,300 L 266,298 L 266,295 L 265,293 L 265,291 L 263,288 L 261,286 L 260,284 L 262,282 L 260,281 L 258,282 L 256,282 L 253,283 L 251,284 L 249,284 L 246,283 L 244,282 L 245,280 L 243,279 L 241,279 L 240,276 L 237,276 L 235,275 L 235,272 L 237,271 L 237,268 L 237,265 L 239,260 L 241,256 L 244,254 L 245,253 L 244,250 L 242,248 L 245,244 L 247,242 L 248,246 L 250,247 L 252,248 L 255,248 L 258,248 L 260,248 L 263,248 L 266,245 L 269,242 L 271,241 L 273,240 L 275,237 L 276,235 L 278,233 L 280,232 L 283,233 L 287,234 L 290,235 L 294,237 L 296,238 L 299,239 L 301,238 L 304,236 L 306,236 L 307,238 L 310,236 L 313,234 L 315,231 L 310,229 L 310,226 L 311,223 L 314,221 L 315,218 L 314,216 L 315,213 L 318,210 L 318,207 L 316,204 L 314,203 L 315,200 L 315,198 L 312,196 L 311,193 L 311,190 L 312,189 L 311,186 L 310,183 L 309,179 L 310,176 L 312,173 L 313,170 L 313,167 L 309,165 L 307,163 L 305,160 L 306,158 L 308,155 L 310,152 L 309,149 L 308,147 L 310,146 L 311,144 L 310,142 L 308,140 L 307,138 L 306,137 L 306,137 L 308,136 L 310,137 L 312,139 L 312,136 L 313,134 L 312,131 L 312,128 L 314,127 L 318,127 L 322,127 L 325,127 L 327,127 L 329,127 L 330,127 L 330,124 L 331,121 L 341,113 L 346,112 L 346,109 L 352,109 L 355,106 L 356,107 L 356,109 L 358,108 L 359,105 L 363,105 L 364,100 L 369,94 L 371,93 L 373,94 L 375,95 L 375,97 L 374,98 L 377,98 L 379,99 L 378,101 L 377,103 L 378,103 L 380,101 L 382,100 L 384,100 L 387,100 L 389,102 L 391,105 L 394,108 L 395,111 L 394,115 L 394,117 L 392,120 L 390,123 L 389,124 L 391,125 L 391,128 L 391,131 L 391,134 L 394,136 L 396,139 L 397,142 L 399,144 L 400,147 L 397,150 L 396,152 L 394,154 L 394,157 L 394,160 L 393,162 L 393,162 L 390,162 L 388,163 L 387,165 L 388,167 L 389,170 L 390,173 L 390,178 L 390,185 L 386,186 L 387,187 L 388,188 L 390,189 L 390,192 L 389,194 L 392,196 L 394,197 L 394,200 L 393,203 L 391,205 L 390,207 L 391,209 L 394,210 L 398,210 L 402,210 L 402,213 L 402,214 L 405,214 L 406,217 L 406,219 L 407,222 L 410,225 L 410,228 L 410,229 L 412,230 L 414,231 L 415,234 L 414,238 L 413,240 L 413,243 L 413,246 L 414,248 L 416,248 L 418,247 L 420,246 L 422,244 L 424,244 L 424,244 L 425,246 L 427,246 L 429,244 L 431,242 L 432,239 L 433,236 L 434,233 L 436,232 L 439,232 L 441,234 L 443,236 L 444,238 L 445,237 L 447,236 L 449,236 L 450,238 L 451,240 L 453,241 L 454,242 L 455,246 L 457,249 L 459,251 L 461,252 L 463,253 L 463,255 L 464,256 L 465,257 L 467,259 L 467,261 L 469,261 L 471,259 L 473,261 L 475,263 L 477,264 L 478,267 L 480,268 L 481,269 L 481,271 L 480,273 L 483,275 L 483,276 L 483,277 L 477,283 L 477,285 L 477,286 L 481,286 L 481,286 L 482,287 L 482,292 L 480,294 L 480,297 L 480,304 L 482,306 L 482,308 L 475,316 L 471,316 L 465,313 L 460,316 L 455,314 L 453,314 L 446,322 L 439,327 L 436,328 L 431,329 L 424,329 L 420,326 L 417,325 L 414,323 L 412,322 L 409,322 L 407,323 L 404,324 L 401,325 L 399,326 L 394,326 L 390,322 L 389,318 L 386,316 L 383,316 L 380,315 L 377,314 L 374,313 L 372,313 L 370,314 L 369,316 L 368,318 L 367,320 L 368,322 L 369,324 L 370,325 L 370,326 L 369,328 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=6&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg7" data-class="m0r1-rus-reg7" fill="#FFFFFF" opacity="0"
+					d="M 308,135 L 307,133 L 308,131 L 310,131 L 312,131 L 312,133 L 312,135 Z"/>
+				</a>
+
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 540,20 L 542,20 L 542,22 L 542,25 L 542,29 L 542,32 L 541,34 L 538,34 L 535,33 L 534,31 L 535,28 L 536,23 L 538,21 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 457,75 L 459,73 L 461,75 L 461,73 L 463,72 L 465,73 L 466,71 L 468,71 L 471,71 L 472,72 L 472,73 L 472,73 L 472,75 L 472,76 L 470,78 L 467,79 L 464,80 L 462,80 L 460,80 L 460,80 L 458,78 L 457,76 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 454,95 L 455,92 L 458,92 L 459,94 L 459,94 L 460,92 L 464,92 L 466,92 L 467,94 L 468,95 L 468,97 L 468,99 L 468,99 L 465,99 L 463,100 L 461,101 L 459,103 L 457,101 L 457,98 L 455,97 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 440,87 L 438,86 L 437,88 L 437,90 L 438,91 L 439,93 L 439,93 L 441,93 L 442,90 L 443,92 L 443,92 L 444,93 L 445,93 L 447,94 L 449,95 L 450,95 L 452,94 L 452,92 L 453,90 L 455,88 L 457,87 L 459,86 L 459,84 L 459,84 L 459,81 L 458,78 L 456,76 L 453,75 L 451,76 L 450,77 L 448,77 L 446,78 L 446,80 L 446,81 L 443,80 L 441,80 L 439,81 L 439,83 L 439,84 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 604,121 L 603,125 L 604,127 L 605,129 L 605,129 L 606,131 L 608,131 L 609,129 L 608,126 L 608,126 L 608,124 L 607,122 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 635,133 L 634,136 L 636,137 L 638,137 L 641,137 L 642,136 L 642,133 L 640,132 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 642,132 L 643,129 L 646,128 L 646,128 L 647,129 L 648,130 L 648,130 L 648,131 L 648,132 L 647,133 L 647,133 L 645,134 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 638,207 L 639,206 L 641,206 L 643,207 L 644,209 L 644,211 L 644,211 L 644,213 L 641,214 L 640,212 L 639,210 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 641,218 L 640,216 L 641,214 L 644,213 L 644,215 L 644,217 L 644,218 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 642,221 L 642,224 L 643,225 L 644,227 L 647,227 L 647,225 L 646,223 L 646,223 L 645,221 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 643,228 L 647,228 L 647,230 L 647,232 L 648,233 L 648,235 L 648,237 L 647,238 L 645,237 L 644,235 L 643,233 L 643,231 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 642,244 L 644,243 L 645,243 L 646,244 L 646,246 L 646,248 L 646,250 L 646,252 L 645,254 L 643,253 L 641,252 L 641,249 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 643,271 L 641,271 L 640,273 L 640,275 L 641,276 L 643,277 L 644,275 L 644,273 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 639,282 L 636,281 L 634,278 L 634,275 L 634,272 L 636,270 L 638,269 L 637,267 L 637,265 L 637,260 L 639,257 L 640,254 L 642,254 L 644,255 L 643,257 L 644,259 L 643,259 L 644,261 L 643,263 L 642,265 L 643,267 L 642,269 L 641,271 L 640,272 L 639,275 L 639,277 L 640,279 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 539,235 L 540,232 L 542,230 L 543,230 L 544,232 L 544,234 L 543,235 L 540,235 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 546,227 L 548,228 L 548,229 L 548,231 L 549,232 L 549,234 L 548,235 L 545,235 L 543,234 L 543,232 L 544,230 L 545,229 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 567,219 L 569,219 L 570,221 L 572,222 L 573,224 L 575,225 L 577,226 L 579,228 L 580,230 L 582,232 L 583,233 L 585,236 L 586,238 L 588,239 L 591,241 L 593,242 L 595,243 L 597,245 L 599,245 L 601,247 L 604,249 L 606,249 L 607,251 L 609,252 L 608,253 L 606,254 L 603,254 L 602,252 L 600,252 L 598,252 L 598,253 L 598,255 L 599,256 L 600,258 L 601,260 L 601,262 L 602,263 L 603,264 L 605,265 L 607,265 L 609,265 L 611,266 L 613,267 L 614,269 L 616,270 L 617,272 L 616,273 L 614,273 L 612,272 L 610,272 L 609,272 L 609,274 L 610,276 L 611,278 L 610,280 L 608,280 L 606,278 L 604,276 L 602,273 L 600,270 L 598,267 L 596,264 L 594,262 L 592,261 L 591,258 L 589,256 L 588,253 L 586,250 L 584,248 L 582,246 L 581,244 L 579,243 L 577,242 L 575,241 L 573,239 L 573,237 L 572,235 L 571,233 L 569,231 L 567,229 L 568,227 L 570,227 L 569,225 L 567,225 L 565,223 L 565,220 Z"/>
+				</a>
+				<a xlink:href="/routes/index.html?RoutesSearch%5Bdistrict%5D=1&RoutesSearch%5Bregion%5D=&RoutesSearch%5Btype_id%5D=&RoutesSearch%5Bprice%5D=">
+					<path class="m0r1-rus-map m0r1-rus-reg8" data-class="m0r1-rus-reg8" fill="#FFFFFF" opacity="0"
+					d="M 568,341 L 566,340 L 565,338 L 565,336 L 566,334 L 567,333 L 566,331 L 565,328 L 563,326 L 561,323 L 559,322 L 559,319 L 560,316 L 561,313 L 564,313 L 568,313 L 568,310 L 567,306 L 566,303 L 566,301 L 565,298 L 565,294 L 565,291 L 565,289 L 563,287 L 562,285 L 560,287 L 559,289 L 558,291 L 557,292 L 556,294 L 555,296 L 552,298 L 550,300 L 548,301 L 546,300 L 544,299 L 543,297 L 542,294 L 539,294 L 534,293 L 531,293 L 529,295 L 526,295 L 524,296 L 521,293 L 505,276 L 502,275 L 500,274 L 497,274 L 495,275 L 493,274 L 490,275 L 488,275 L 487,276 L 485,277 L 483,276 L 483,275 L 483,274 L 481,272 L 481,270 L 481,268 L 479,268 L 478,266 L 478,264 L 476,263 L 474,261 L 471,260 L 469,259 L 469,260 L 468,261 L 467,258 L 465,257 L 463,255 L 463,253 L 460,252 L 458,249 L 456,246 L 454,242 L 451,240 L 450,237 L 447,236 L 446,236 L 445,237 L 443,236 L 441,234 L 440,232 L 438,232 L 435,232 L 434,234 L 433,236 L 432,238 L 432,239 L 431,241 L 430,243 L 428,245 L 426,246 L 424,244 L 422,244 L 420,245 L 418,247 L 416,248 L 413,247 L 413,243 L 413,240 L 414,238 L 414,236 L 414,232 L 412,230 L 410,230 L 410,227 L 409,224 L 407,222 L 406,219 L 405,216 L 405,214 L 403,214 L 402,211 L 401,209 L 397,209 L 394,209 L 391,208 L 391,204 L 393,203 L 394,201 L 394,198 L 392,196 L 390,194 L 390,191 L 389,189 L 387,187 L 387,185 L 389,185 L 390,184 L 390,180 L 390,176 L 390,172 L 389,169 L 388,166 L 389,163 L 391,162 L 393,162 L 394,160 L 394,158 L 395,155 L 396,152 L 397,150 L 399,149 L 400,148 L 399,145 L 397,142 L 396,139 L 393,136 L 391,133 L 391,129 L 391,127 L 392,125 L 394,125 L 395,125 L 396,123 L 397,123 L 399,124 L 398,125 L 400,125 L 402,124 L 405,123 L 409,123 L 411,123 L 412,124 L 412,126 L 413,126 L 416,126 L 422,126 L 423,124 L 421,122 L 420,119 L 421,117 L 424,117 L 429,117 L 431,115 L 437,115 L 438,116 L 439,118 L 440,120 L 440,121 L 442,121 L 443,121 L 444,124 L 444,126 L 444,128 L 446,129 L 448,130 L 450,131 L 451,130 L 451,127 L 449,125 L 449,122 L 451,121 L 453,121 L 454,122 L 456,122 L 457,119 L 458,117 L 461,117 L 462,117 L 464,118 L 464,114 L 466,113 L 465,111 L 462,111 L 461,109 L 461,107 L 463,105 L 462,103 L 463,101 L 465,101 L 467,100 L 470,99 L 471,98 L 473,97 L 475,96 L 477,95 L 479,98 L 479,96 L 480,93 L 482,92 L 484,91 L 486,91 L 488,91 L 489,91 L 489,95 L 491,94 L 493,93 L 495,92 L 497,93 L 498,94 L 499,94 L 501,92 L 502,90 L 502,87 L 504,84 L 508,81 L 511,80 L 515,79 L 517,79 L 518,81 L 519,82 L 520,83 L 522,83 L 524,82 L 526,83 L 528,85 L 525,79 L 526,76 L 534,70 L 534,63 L 537,63 L 537,64 L 539,65 L 541,63 L 543,63 L 544,61 L 538,60 L 536,59 L 536,56 L 546,43 L 558,33 L 561,32 L 564,30 L 573,24 L 578,24 L 580,25 L 581,26 L 584,26 L 585,24 L 582,23 L 579,22 L 578,20 L 580,18 L 583,15 L 586,13 L 589,12 L 591,11 L 593,12 L 594,14 L 595,15 L 595,17 L 595,19 L 594,20 L 596,20 L 598,21 L 599,23 L 601,23 L 602,22 L 604,21 L 605,24 L 604,27 L 603,30 L 600,31 L 598,32 L 597,34 L 594,35 L 591,35 L 589,34 L 590,36 L 589,39 L 589,41 L 587,41 L 583,41 L 582,41 L 582,43 L 584,43 L 587,44 L 590,44 L 590,45 L 591,48 L 592,49 L 592,52 L 591,54 L 589,56 L 587,57 L 586,59 L 587,60 L 590,57 L 592,55 L 595,55 L 600,55 L 607,55 L 610,57 L 610,59 L 610,61 L 608,63 L 606,65 L 605,66 L 606,70 L 606,73 L 605,75 L 607,78 L 607,81 L 608,84 L 609,87 L 609,89 L 610,92 L 612,96 L 613,98 L 613,100 L 612,101 L 610,101 L 607,101 L 606,103 L 604,104 L 603,106 L 604,108 L 604,110 L 606,112 L 606,114 L 606,116 L 603,115 L 601,112 L 601,114 L 601,116 L 603,117 L 603,120 L 600,121 L 599,121 L 600,123 L 602,125 L 604,130 L 605,131 L 606,133 L 607,135 L 608,136 L 609,133 L 611,132 L 614,132 L 615,134 L 615,136 L 615,137 L 617,138 L 619,138 L 622,138 L 624,139 L 625,141 L 625,144 L 623,145 L 623,146 L 624,148 L 625,149 L 627,150 L 629,151 L 631,153 L 632,154 L 632,156 L 630,158 L 629,160 L 629,162 L 629,164 L 631,166 L 633,167 L 635,167 L 636,168 L 637,170 L 636,171 L 634,172 L 633,173 L 633,175 L 634,176 L 635,177 L 637,178 L 638,179 L 638,181 L 639,183 L 640,185 L 640,193 L 641,194 L 641,196 L 641,199 L 641,203 L 640,205 L 638,206 L 636,204 L 635,201 L 633,200 L 632,197 L 635,196 L 636,194 L 633,193 L 630,190 L 626,188 L 622,185 L 618,183 L 613,181 L 609,177 L 598,167 L 598,160 L 594,157 L 593,153 L 595,152 L 595,148 L 594,143 L 593,138 L 591,135 L 590,130 L 590,118 L 586,115 L 585,117 L 585,120 L 585,122 L 585,125 L 587,128 L 587,132 L 584,133 L 581,132 L 578,131 L 577,127 L 575,130 L 573,132 L 572,134 L 572,137 L 573,139 L 574,140 L 574,143 L 574,146 L 574,149 L 575,152 L 576,154 L 579,151 L 582,151 L 581,153 L 581,156 L 580,157 L 578,159 L 577,161 L 577,162 L 576,164 L 574,167 L 571,169 L 569,167 L 569,165 L 566,167 L 563,168 L 562,169 L 562,171 L 564,173 L 563,175 L 561,176 L 558,178 L 555,179 L 555,182 L 554,183 L 551,183 L 548,185 L 546,187 L 544,189 L 543,191 L 542,192 L 542,195 L 542,199 L 542,205 L 542,209 L 541,210 L 540,212 L 541,218 L 540,224 L 539,227 L 539,230 L 538,232 L 537,234 L 536,236 L 536,237 L 538,237 L 540,236 L 541,235 L 544,235 L 545,235 L 548,236 L 550,238 L 550,240 L 551,240 L 551,236 L 551,233 L 552,230 L 556,229 L 559,229 L 562,230 L 563,231 L 565,231 L 567,231 L 569,233 L 569,235 L 572,238 L 574,241 L 575,244 L 576,246 L 577,248 L 579,253 L 583,258 L 586,262 L 588,266 L 588,270 L 588,284 L 590,287 L 589,290 L 589,317 L 587,318 L 587,321 L 586,324 L 583,328 L 580,331 L 577,332 L 574,331 L 571,330 L 571,330 L 571,333 L 571,335 L 570,337 L 569,338 Z"/>
+				</a>
+
+			</svg>
+		</div>
+	</div>
+</div>
+
+	<section class="choise ">
+		<div class="page-wrapper">
+			<div class="choise__items">
+				<a href="#" class="choise__items-item"><i class="routes-icon type-1"></i><span>Пеший</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-2"></i><span>Велосипедный</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-3"></i><span>Снегоходный</span></a>
+				<a href="#" href="#" class="choise__items-item"><i class="routes-icon type-4"></i><span>Охота</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-5"></i><span>Беговой</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-6"></i><span>Водный</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-7"></i><span>Лыжный</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-8"></i><span>Рыбалка</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-9"></i><span>Пещерный</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-10"></i><span>Конный</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-11"></i><span>Горнолыжный</span></a>
+				<a href="#" class="choise__items-item"><i class="routes-icon type-12"></i><span>Квадроцикл</span></a>
+			</div>
+		</div>
+	</section>
+
+	<section class="about">
+		<div class="page-wrapper">
+			<div class="link-wrap"><a href="#" class="section__link">О нас &#160&#8594</a></div>
+			<div class="about__title">
+				<h2>ПоискПути - уникальный в России ресурс</h2>
+				<div class="about__title-discr">позволяющий Вам в полной мере насладиться активным отдыхом на природе</div>
+			</div>
+			<div class="about__list-items">
+				<div class="about__list-items_item">
+					<div class="about__list-items_item-img"><img src="img/icons/About/1.png" alt="АЛЬТ"></div>
+					<div class="about__list-items_item-discr">Добавляйте новые или выбирайте уже готовые маршруты
+					</div>	
+				</div>
+				<div class="about__list-items_item">
+					<div class="about__list-items_item-img"><img src="img/icons/About/2.png" alt="АЛЬТ"></div>
+					<div class="about__list-items_item-discr">Объединяйтесь с другими попутчиками</div>
+				</div>
+				<div class="about__list-items_item">
+					<div class="about__list-items_item-img"><img src="img/icons/About/3.png" alt="АЛЬТ"></div>
+					<div class="about__list-items_item-discr">Находите профессиональных инструкторов</div>
+				</div>
+				<div class="about__list-items_item">
+					<div class="about__list-items_item-img"><img src="img/icons/About/4.png" alt="АЛЬТ"></div>
+					<div class="about__list-items_item-discr">Выбирайте места отдыха по пути следования</div>
+				</div>
+				<div class="about__list-items_item">
+					<div class="about__list-items_item-img"><img src="img/icons/About/5.png" alt="АЛЬТ"></div>
+					<div class="about__list-items_item-discr">Узнавайте полезную информацию в разделе статьи</div>
+				</div>
+				<div class="about__list-items_item">
+					<div class="about__list-items_item-img"><img src="img/icons/About/6.png" alt="АЛЬТ"></div>
+					<div class="about__list-items_item-discr">Делитесь фото и видео впечатлениями в своих дневниках</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="registr">
+		<div class="page-wrapper page-wrapper_padding">
+			<div class="registr__title"><h2>Зарегистрируйтесь и получите</h2></div>
+			<div class="registr__title-discr">доступ ко всем необходимым инструментам сайта абсолютно бесплатно сейчас и навсегда!</div>
+			<a href="#" class="button button_green registr__button">Регистрация</a>
+		</div>
+	</section>
+
+	<section class="service pop-routes">		
+		<div class="service__header page-wrapper page-wrapper_padding">
+			<div class="service__header-title">Популярные направления для активного отдыха</div>
+			<a href="#" class="section__link">Все маршруты &#160&#8594</a>
+		</div>
+		<div class="pop-routes__content page-wrapper">
+			<div class="pop-routes__content-item" style="background-image: url(img/pop-routes-1.jpg);">
+				<div class="top-line">
+					<i class="fas fa-compass"></i><span>1 маршрут</span>
+				</div>
+				<div class="bottom-line">
+					<div class="bottom-line__top"><i class="fas fa-map-marker-alt"></i><span>Южный - Федеральный</span></div>
+					<div class="bottom-line__bottom"><i class="fas fa-map" style="font-size: 14px;"></i><span>Регион: Крым</span></div>
+				</div>
+			</div>
+			<div class="pop-routes__content-item" style="background-image: url(img/pop-routes-2.jpg);">
+				<div class="top-line">
+					<i class="fas fa-compass"></i><span>1 маршрут</span>
+				</div>
+				<div class="bottom-line">
+					<div class="bottom-line__top"><i class="fas fa-map-marker-alt"></i><span>Южный - Федеральный</span></div>
+					<div class="bottom-line__bottom"><i class="fas fa-map" style="font-size: 14px;"></i><span>Регион: Краснодарский</span></div>
+				</div>
+			</div>
+			<div class="pop-routes__content-item" style="background-image: url(img/pop-routes-3.jpg);">
+				<div class="top-line">
+					<i class="fas fa-compass"></i><span>1 маршрут</span>
+				</div>
+				<div class="bottom-line">
+					<div class="bottom-line__top"><i class="fas fa-map-marker-alt"></i><span>Северо - Западный</span></div>
+					<div class="bottom-line__bottom"><i class="fas fa-map" style="font-size: 14px;"></i><span>Регион: Карелия</span></div>
+				</div>
+			</div>
+			<div class="pop-routes__content-item" style="background-image: url(img/pop-routes-4.jpg);">
+				<div class="top-line">
+					<i class="fas fa-compass"></i><span>1 маршрут</span>
+				</div>
+				<div class="bottom-line">
+					<div class="bottom-line__top"><i class="fas fa-map-marker-alt"></i><span>Сибирский</span></div>
+					<div class="bottom-line__bottom"><i class="fas fa-map" style="font-size: 14px;"></i><span>Регион: Иркутский</span></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="service new-proposal">
+		<div class="service__header page-wrapper page-wrapper_padding">
+			<div class="service__header-title">Новые предложения попутчиков по совместному путешествию</div>
+			<a href="#" class="section__link">Все попутчики &#160&#8594</a>
+		</div>
+		<div class="search-results__list page-wrapper">
+                    <div class="search-results__item">
+                        <div class="search-results__item-info">
+                            <div class="search-results__item-left">
+                                 <div class="search-results__item-photo search-results__item-photo_rounded">
+                                     <img class="search-results__item-photo-img" src="img/user.jpg">
+                                 </div>
+                            </div>
+                            <div class="search-results__item-center">
+                                <div class="search-results__item-name">
+                                    Storm Phperovich
+                                </div>
+                                <div class="search-results__item-tabs">
+                                    <div class="search-results__item-tabs-links">
+                                        <a href="#" class="search-results__item-tabs-link _active" data-tab="tab-1">Кататься на сноуборде</a>
+                                        <a href="#" class="search-results__item-tabs-link" data-tab="tab-2">Искать Ети в горах</a>
+                                        <a href="#" class="search-results__item-tabs-link" data-tab="tab-3">Покорять плато путарано</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-results__item-right">
+                                <ul class="search-results__item-terms">
+                                    <li class="search-results__item-terms-item"><i class="fas fa-search"></i>В поиске:
+                                        <span class="search-results__item-terms-option _active tab-1">Кого угодно</span>
+                                        <span class="search-results__item-terms-option tab-2">Компании</span>
+                                        <span class="search-results__item-terms-option tab-3">Собутыльника</span>
+                                      </li>
+                                      <li class="search-results__item-terms-item"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                      	width="1em" height="1em" viewBox="0 0 488.152 488.152" style="enable-background:new 0 0 488.152 488.152;"
+                                      	xml:space="preserve">
+                                      	<g>
+                                      		<g>
+                                      			<path d="M177.854,269.311c0-6.115-4.96-11.069-11.08-11.069h-38.665c-6.113,0-11.074,4.954-11.074,11.069v38.66
+                                      			c0,6.123,4.961,11.079,11.074,11.079h38.665c6.12,0,11.08-4.956,11.08-11.079V269.311L177.854,269.311z"/>
+                                      			<path d="M274.483,269.311c0-6.115-4.961-11.069-11.069-11.069h-38.67c-6.113,0-11.074,4.954-11.074,11.069v38.66
+                                      			c0,6.123,4.961,11.079,11.074,11.079h38.67c6.108,0,11.069-4.956,11.069-11.079V269.311z"/>
+                                      			<path d="M371.117,269.311c0-6.115-4.961-11.069-11.074-11.069h-38.665c-6.12,0-11.08,4.954-11.08,11.069v38.66
+                                      			c0,6.123,4.96,11.079,11.08,11.079h38.665c6.113,0,11.074-4.956,11.074-11.079V269.311z"/>
+                                      			<path d="M177.854,365.95c0-6.125-4.96-11.075-11.08-11.075h-38.665c-6.113,0-11.074,4.95-11.074,11.075v38.653
+                                      			c0,6.119,4.961,11.074,11.074,11.074h38.665c6.12,0,11.08-4.956,11.08-11.074V365.95L177.854,365.95z"/>
+                                      			<path d="M274.483,365.95c0-6.125-4.961-11.075-11.069-11.075h-38.67c-6.113,0-11.074,4.95-11.074,11.075v38.653
+                                      			c0,6.119,4.961,11.074,11.074,11.074h38.67c6.108,0,11.069-4.956,11.069-11.074V365.95z"/>
+                                      			<path d="M371.117,365.95c0-6.125-4.961-11.075-11.069-11.075h-38.67c-6.12,0-11.08,4.95-11.08,11.075v38.653
+                                      			c0,6.119,4.96,11.074,11.08,11.074h38.67c6.108,0,11.069-4.956,11.069-11.074V365.95L371.117,365.95z"/>
+                                      			<path d="M440.254,54.354v59.05c0,26.69-21.652,48.198-48.338,48.198h-30.493c-26.688,0-48.627-21.508-48.627-48.198V54.142
+                                      			h-137.44v59.262c0,26.69-21.938,48.198-48.622,48.198H96.235c-26.685,0-48.336-21.508-48.336-48.198v-59.05
+                                      			C24.576,55.057,5.411,74.356,5.411,98.077v346.061c0,24.167,19.588,44.015,43.755,44.015h389.82
+                                      			c24.131,0,43.755-19.889,43.755-44.015V98.077C482.741,74.356,463.577,55.057,440.254,54.354z M426.091,422.588
+                                      			c0,10.444-8.468,18.917-18.916,18.917H80.144c-10.448,0-18.916-8.473-18.916-18.917V243.835c0-10.448,8.467-18.921,18.916-18.921
+                                      			h327.03c10.448,0,18.916,8.473,18.916,18.921L426.091,422.588L426.091,422.588z"/>
+                                      			<path d="M96.128,129.945h30.162c9.155,0,16.578-7.412,16.578-16.567V16.573C142.868,7.417,135.445,0,126.29,0H96.128
+                                      			C86.972,0,79.55,7.417,79.55,16.573v96.805C79.55,122.533,86.972,129.945,96.128,129.945z"/>
+                                      			<path d="M361.035,129.945h30.162c9.149,0,16.572-7.412,16.572-16.567V16.573C407.77,7.417,400.347,0,391.197,0h-30.162
+                                      			c-9.154,0-16.577,7.417-16.577,16.573v96.805C344.458,122.533,351.881,129.945,361.035,129.945z"/>
+                                      		</g>
+                                      	</g>
+                                      </svg></i>Месяц поездки:
+                                        <span class="search-results__item-terms-option _active tab-1">Декабрь</span>
+                                        <span class="search-results__item-terms-option tab-2">Июль</span>
+                                        <span class="search-results__item-terms-option tab-3">Пятница</span>
+                                    </li>
+   	                                    <li class="search-results__item-terms-item"><i class="fas fa-map"></i>Регион:
+                                        <span class="search-results__item-terms-option _active tab-1">Калининградский</span>
+                                        <span class="search-results__item-terms-option tab-2">Московский</span>
+                                        <span class="search-results__item-terms-option tab-3">Подмосковский</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-results__item-rests search-results__item-rests_self-offset">
+                            <span class="search-results__item-rests-title">Виды отдыха:</span>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main _active tab-1">
+                                <i class="type-2"></i>
+                                <i class="type-4"></i>
+                                <i class="type-7"></i>
+                            </div>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main tab-2">
+                                <i class="type-2"></i>
+                                <i class="type-10"></i>
+                                <i class="type-11"></i>
+                                <i class="type-9"></i>
+                            </div>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main tab-3">
+                                <i class="type-10"></i>
+                                <i class="type-11"></i>
+                                <i class="type-12"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-results__item">
+                        <div class="search-results__item-info">
+                            <div class="search-results__item-left">
+                                 <div class="search-results__item-photo search-results__item-photo_rounded">
+                                     <img class="search-results__item-photo-img" src="img/user.jpg">
+                                 </div>
+                            </div>
+                            <div class="search-results__item-center">
+                                <div class="search-results__item-name">
+                                    Storm Phperovich
+                                </div>
+                                <div class="search-results__item-tabs">
+                                    <div class="search-results__item-tabs-links">
+                                        <a href="#" class="search-results__item-tabs-link _active" data-tab="tab-1">Кататься на сноуборде</a>
+                                        <a href="#" class="search-results__item-tabs-link" data-tab="tab-2">Искать Ети в горах</a>
+                                        <a href="#" class="search-results__item-tabs-link" data-tab="tab-3">Покорять плато путарано</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-results__item-right">
+                                <ul class="search-results__item-terms">
+                                    <li class="search-results__item-terms-item"><i class="fas fa-search"></i>В поиске:
+                                        <span class="search-results__item-terms-option _active tab-1">Кого угодно</span>
+                                        <span class="search-results__item-terms-option tab-2">Компании</span>
+                                        <span class="search-results__item-terms-option tab-3">Собутыльника</span>
+                                      </li>
+                                      <li class="search-results__item-terms-item"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                      	width="1em" height="1em" viewBox="0 0 488.152 488.152" style="enable-background:new 0 0 488.152 488.152;"
+                                      	xml:space="preserve">
+                                      	<g>
+                                      		<g>
+                                      			<path d="M177.854,269.311c0-6.115-4.96-11.069-11.08-11.069h-38.665c-6.113,0-11.074,4.954-11.074,11.069v38.66
+                                      			c0,6.123,4.961,11.079,11.074,11.079h38.665c6.12,0,11.08-4.956,11.08-11.079V269.311L177.854,269.311z"/>
+                                      			<path d="M274.483,269.311c0-6.115-4.961-11.069-11.069-11.069h-38.67c-6.113,0-11.074,4.954-11.074,11.069v38.66
+                                      			c0,6.123,4.961,11.079,11.074,11.079h38.67c6.108,0,11.069-4.956,11.069-11.079V269.311z"/>
+                                      			<path d="M371.117,269.311c0-6.115-4.961-11.069-11.074-11.069h-38.665c-6.12,0-11.08,4.954-11.08,11.069v38.66
+                                      			c0,6.123,4.96,11.079,11.08,11.079h38.665c6.113,0,11.074-4.956,11.074-11.079V269.311z"/>
+                                      			<path d="M177.854,365.95c0-6.125-4.96-11.075-11.08-11.075h-38.665c-6.113,0-11.074,4.95-11.074,11.075v38.653
+                                      			c0,6.119,4.961,11.074,11.074,11.074h38.665c6.12,0,11.08-4.956,11.08-11.074V365.95L177.854,365.95z"/>
+                                      			<path d="M274.483,365.95c0-6.125-4.961-11.075-11.069-11.075h-38.67c-6.113,0-11.074,4.95-11.074,11.075v38.653
+                                      			c0,6.119,4.961,11.074,11.074,11.074h38.67c6.108,0,11.069-4.956,11.069-11.074V365.95z"/>
+                                      			<path d="M371.117,365.95c0-6.125-4.961-11.075-11.069-11.075h-38.67c-6.12,0-11.08,4.95-11.08,11.075v38.653
+                                      			c0,6.119,4.96,11.074,11.08,11.074h38.67c6.108,0,11.069-4.956,11.069-11.074V365.95L371.117,365.95z"/>
+                                      			<path d="M440.254,54.354v59.05c0,26.69-21.652,48.198-48.338,48.198h-30.493c-26.688,0-48.627-21.508-48.627-48.198V54.142
+                                      			h-137.44v59.262c0,26.69-21.938,48.198-48.622,48.198H96.235c-26.685,0-48.336-21.508-48.336-48.198v-59.05
+                                      			C24.576,55.057,5.411,74.356,5.411,98.077v346.061c0,24.167,19.588,44.015,43.755,44.015h389.82
+                                      			c24.131,0,43.755-19.889,43.755-44.015V98.077C482.741,74.356,463.577,55.057,440.254,54.354z M426.091,422.588
+                                      			c0,10.444-8.468,18.917-18.916,18.917H80.144c-10.448,0-18.916-8.473-18.916-18.917V243.835c0-10.448,8.467-18.921,18.916-18.921
+                                      			h327.03c10.448,0,18.916,8.473,18.916,18.921L426.091,422.588L426.091,422.588z"/>
+                                      			<path d="M96.128,129.945h30.162c9.155,0,16.578-7.412,16.578-16.567V16.573C142.868,7.417,135.445,0,126.29,0H96.128
+                                      			C86.972,0,79.55,7.417,79.55,16.573v96.805C79.55,122.533,86.972,129.945,96.128,129.945z"/>
+                                      			<path d="M361.035,129.945h30.162c9.149,0,16.572-7.412,16.572-16.567V16.573C407.77,7.417,400.347,0,391.197,0h-30.162
+                                      			c-9.154,0-16.577,7.417-16.577,16.573v96.805C344.458,122.533,351.881,129.945,361.035,129.945z"/>
+                                      		</g>
+                                      	</g>
+                                      </svg></i>Месяц поездки:
+                                        <span class="search-results__item-terms-option _active tab-1">Декабрь</span>
+                                        <span class="search-results__item-terms-option tab-2">Июль</span>
+                                        <span class="search-results__item-terms-option tab-3">Пятница</span>
+                                    </li>
+   	                                    <li class="search-results__item-terms-item"><i class="fas fa-map"></i>Регион:
+                                        <span class="search-results__item-terms-option _active tab-1">Калининградский</span>
+                                        <span class="search-results__item-terms-option tab-2">Московский</span>
+                                        <span class="search-results__item-terms-option tab-3">Подмосковский</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-results__item-rests search-results__item-rests_self-offset">
+                            <span class="search-results__item-rests-title">Виды отдыха:</span>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main _active tab-1">
+                                <i class="type-2"></i>
+                                <i class="type-4"></i>
+                                <i class="type-7"></i>
+                            </div>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main tab-2">
+                                <i class="type-2"></i>
+                                <i class="type-10"></i>
+                                <i class="type-11"></i>
+                                <i class="type-9"></i>
+                            </div>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main tab-3">
+                                <i class="type-10"></i>
+                                <i class="type-11"></i>
+                                <i class="type-12"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-results__item">
+                        <div class="search-results__item-info">
+                            <div class="search-results__item-left">
+                                 <div class="search-results__item-photo search-results__item-photo_rounded">
+                                     <img class="search-results__item-photo-img" src="img/user.jpg">
+                                 </div>
+                            </div>
+                            <div class="search-results__item-center">
+                                <div class="search-results__item-name">
+                                    Storm Phperovich
+                                </div>
+                                <div class="search-results__item-tabs">
+                                    <div class="search-results__item-tabs-links">
+                                        <a href="#" class="search-results__item-tabs-link _active" data-tab="tab-1">Кататься на сноуборде</a>
+                                        <a href="#" class="search-results__item-tabs-link" data-tab="tab-2">Искать Ети в горах</a>
+                                        <a href="#" class="search-results__item-tabs-link" data-tab="tab-3">Покорять плато путарано</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-results__item-right">
+                                <ul class="search-results__item-terms">
+                                    <li class="search-results__item-terms-item"><i class="fas fa-search"></i>В поиске:
+                                        <span class="search-results__item-terms-option _active tab-1">Кого угодно</span>
+                                        <span class="search-results__item-terms-option tab-2">Компании</span>
+                                        <span class="search-results__item-terms-option tab-3">Собутыльника</span>
+                                      </li>
+                                      <li class="search-results__item-terms-item"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                      	width="1em" height="1em" viewBox="0 0 488.152 488.152" style="enable-background:new 0 0 488.152 488.152;"
+                                      	xml:space="preserve">
+                                      	<g>
+                                      		<g>
+                                      			<path d="M177.854,269.311c0-6.115-4.96-11.069-11.08-11.069h-38.665c-6.113,0-11.074,4.954-11.074,11.069v38.66
+                                      			c0,6.123,4.961,11.079,11.074,11.079h38.665c6.12,0,11.08-4.956,11.08-11.079V269.311L177.854,269.311z"/>
+                                      			<path d="M274.483,269.311c0-6.115-4.961-11.069-11.069-11.069h-38.67c-6.113,0-11.074,4.954-11.074,11.069v38.66
+                                      			c0,6.123,4.961,11.079,11.074,11.079h38.67c6.108,0,11.069-4.956,11.069-11.079V269.311z"/>
+                                      			<path d="M371.117,269.311c0-6.115-4.961-11.069-11.074-11.069h-38.665c-6.12,0-11.08,4.954-11.08,11.069v38.66
+                                      			c0,6.123,4.96,11.079,11.08,11.079h38.665c6.113,0,11.074-4.956,11.074-11.079V269.311z"/>
+                                      			<path d="M177.854,365.95c0-6.125-4.96-11.075-11.08-11.075h-38.665c-6.113,0-11.074,4.95-11.074,11.075v38.653
+                                      			c0,6.119,4.961,11.074,11.074,11.074h38.665c6.12,0,11.08-4.956,11.08-11.074V365.95L177.854,365.95z"/>
+                                      			<path d="M274.483,365.95c0-6.125-4.961-11.075-11.069-11.075h-38.67c-6.113,0-11.074,4.95-11.074,11.075v38.653
+                                      			c0,6.119,4.961,11.074,11.074,11.074h38.67c6.108,0,11.069-4.956,11.069-11.074V365.95z"/>
+                                      			<path d="M371.117,365.95c0-6.125-4.961-11.075-11.069-11.075h-38.67c-6.12,0-11.08,4.95-11.08,11.075v38.653
+                                      			c0,6.119,4.96,11.074,11.08,11.074h38.67c6.108,0,11.069-4.956,11.069-11.074V365.95L371.117,365.95z"/>
+                                      			<path d="M440.254,54.354v59.05c0,26.69-21.652,48.198-48.338,48.198h-30.493c-26.688,0-48.627-21.508-48.627-48.198V54.142
+                                      			h-137.44v59.262c0,26.69-21.938,48.198-48.622,48.198H96.235c-26.685,0-48.336-21.508-48.336-48.198v-59.05
+                                      			C24.576,55.057,5.411,74.356,5.411,98.077v346.061c0,24.167,19.588,44.015,43.755,44.015h389.82
+                                      			c24.131,0,43.755-19.889,43.755-44.015V98.077C482.741,74.356,463.577,55.057,440.254,54.354z M426.091,422.588
+                                      			c0,10.444-8.468,18.917-18.916,18.917H80.144c-10.448,0-18.916-8.473-18.916-18.917V243.835c0-10.448,8.467-18.921,18.916-18.921
+                                      			h327.03c10.448,0,18.916,8.473,18.916,18.921L426.091,422.588L426.091,422.588z"/>
+                                      			<path d="M96.128,129.945h30.162c9.155,0,16.578-7.412,16.578-16.567V16.573C142.868,7.417,135.445,0,126.29,0H96.128
+                                      			C86.972,0,79.55,7.417,79.55,16.573v96.805C79.55,122.533,86.972,129.945,96.128,129.945z"/>
+                                      			<path d="M361.035,129.945h30.162c9.149,0,16.572-7.412,16.572-16.567V16.573C407.77,7.417,400.347,0,391.197,0h-30.162
+                                      			c-9.154,0-16.577,7.417-16.577,16.573v96.805C344.458,122.533,351.881,129.945,361.035,129.945z"/>
+                                      		</g>
+                                      	</g>
+                                      </svg></i>Месяц поездки:
+                                        <span class="search-results__item-terms-option _active tab-1">Декабрь</span>
+                                        <span class="search-results__item-terms-option tab-2">Июль</span>
+                                        <span class="search-results__item-terms-option tab-3">Пятница</span>
+                                    </li>
+   	                                    <li class="search-results__item-terms-item"><i class="fas fa-map"></i>Регион:
+                                        <span class="search-results__item-terms-option _active tab-1">Калининградский</span>
+                                        <span class="search-results__item-terms-option tab-2">Московский</span>
+                                        <span class="search-results__item-terms-option tab-3">Подмосковский</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-results__item-rests search-results__item-rests_self-offset">
+                            <span class="search-results__item-rests-title">Виды отдыха:</span>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main _active tab-1">
+                                <i class="type-2"></i>
+                                <i class="type-4"></i>
+                                <i class="type-7"></i>
+                            </div>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main tab-2">
+                                <i class="type-2"></i>
+                                <i class="type-10"></i>
+                                <i class="type-11"></i>
+                                <i class="type-9"></i>
+                            </div>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main tab-3">
+                                <i class="type-10"></i>
+                                <i class="type-11"></i>
+                                <i class="type-12"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-results__item">
+                        <div class="search-results__item-info">
+                            <div class="search-results__item-left">
+                                 <div class="search-results__item-photo search-results__item-photo_rounded">
+                                     <img class="search-results__item-photo-img" src="img/user.jpg">
+                                 </div>
+                            </div>
+                            <div class="search-results__item-center">
+                                <div class="search-results__item-name">
+                                    Storm Phperovich
+                                </div>
+                                <div class="search-results__item-tabs">
+                                    <div class="search-results__item-tabs-links">
+                                        <a href="#" class="search-results__item-tabs-link _active" data-tab="tab-1">Кататься на сноуборде</a>
+                                        <a href="#" class="search-results__item-tabs-link" data-tab="tab-2">Искать Ети в горах</a>
+                                        <a href="#" class="search-results__item-tabs-link" data-tab="tab-3">Покорять плато путарано</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-results__item-right">
+                                <ul class="search-results__item-terms">
+                                    <li class="search-results__item-terms-item"><i class="fas fa-search"></i>В поиске:
+                                        <span class="search-results__item-terms-option _active tab-1">Кого угодно</span>
+                                        <span class="search-results__item-terms-option tab-2">Компании</span>
+                                        <span class="search-results__item-terms-option tab-3">Собутыльника</span>
+                                      </li>
+                                      <li class="search-results__item-terms-item"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                      	width="1em" height="1em" viewBox="0 0 488.152 488.152" style="enable-background:new 0 0 488.152 488.152;"
+                                      	xml:space="preserve">
+                                      	<g>
+                                      		<g>
+                                      			<path d="M177.854,269.311c0-6.115-4.96-11.069-11.08-11.069h-38.665c-6.113,0-11.074,4.954-11.074,11.069v38.66
+                                      			c0,6.123,4.961,11.079,11.074,11.079h38.665c6.12,0,11.08-4.956,11.08-11.079V269.311L177.854,269.311z"/>
+                                      			<path d="M274.483,269.311c0-6.115-4.961-11.069-11.069-11.069h-38.67c-6.113,0-11.074,4.954-11.074,11.069v38.66
+                                      			c0,6.123,4.961,11.079,11.074,11.079h38.67c6.108,0,11.069-4.956,11.069-11.079V269.311z"/>
+                                      			<path d="M371.117,269.311c0-6.115-4.961-11.069-11.074-11.069h-38.665c-6.12,0-11.08,4.954-11.08,11.069v38.66
+                                      			c0,6.123,4.96,11.079,11.08,11.079h38.665c6.113,0,11.074-4.956,11.074-11.079V269.311z"/>
+                                      			<path d="M177.854,365.95c0-6.125-4.96-11.075-11.08-11.075h-38.665c-6.113,0-11.074,4.95-11.074,11.075v38.653
+                                      			c0,6.119,4.961,11.074,11.074,11.074h38.665c6.12,0,11.08-4.956,11.08-11.074V365.95L177.854,365.95z"/>
+                                      			<path d="M274.483,365.95c0-6.125-4.961-11.075-11.069-11.075h-38.67c-6.113,0-11.074,4.95-11.074,11.075v38.653
+                                      			c0,6.119,4.961,11.074,11.074,11.074h38.67c6.108,0,11.069-4.956,11.069-11.074V365.95z"/>
+                                      			<path d="M371.117,365.95c0-6.125-4.961-11.075-11.069-11.075h-38.67c-6.12,0-11.08,4.95-11.08,11.075v38.653
+                                      			c0,6.119,4.96,11.074,11.08,11.074h38.67c6.108,0,11.069-4.956,11.069-11.074V365.95L371.117,365.95z"/>
+                                      			<path d="M440.254,54.354v59.05c0,26.69-21.652,48.198-48.338,48.198h-30.493c-26.688,0-48.627-21.508-48.627-48.198V54.142
+                                      			h-137.44v59.262c0,26.69-21.938,48.198-48.622,48.198H96.235c-26.685,0-48.336-21.508-48.336-48.198v-59.05
+                                      			C24.576,55.057,5.411,74.356,5.411,98.077v346.061c0,24.167,19.588,44.015,43.755,44.015h389.82
+                                      			c24.131,0,43.755-19.889,43.755-44.015V98.077C482.741,74.356,463.577,55.057,440.254,54.354z M426.091,422.588
+                                      			c0,10.444-8.468,18.917-18.916,18.917H80.144c-10.448,0-18.916-8.473-18.916-18.917V243.835c0-10.448,8.467-18.921,18.916-18.921
+                                      			h327.03c10.448,0,18.916,8.473,18.916,18.921L426.091,422.588L426.091,422.588z"/>
+                                      			<path d="M96.128,129.945h30.162c9.155,0,16.578-7.412,16.578-16.567V16.573C142.868,7.417,135.445,0,126.29,0H96.128
+                                      			C86.972,0,79.55,7.417,79.55,16.573v96.805C79.55,122.533,86.972,129.945,96.128,129.945z"/>
+                                      			<path d="M361.035,129.945h30.162c9.149,0,16.572-7.412,16.572-16.567V16.573C407.77,7.417,400.347,0,391.197,0h-30.162
+                                      			c-9.154,0-16.577,7.417-16.577,16.573v96.805C344.458,122.533,351.881,129.945,361.035,129.945z"/>
+                                      		</g>
+                                      	</g>
+                                      </svg></i>Месяц поездки:
+                                        <span class="search-results__item-terms-option _active tab-1">Декабрь</span>
+                                        <span class="search-results__item-terms-option tab-2">Июль</span>
+                                        <span class="search-results__item-terms-option tab-3">Пятница</span>
+                                    </li>
+   	                                    <li class="search-results__item-terms-item"><i class="fas fa-map"></i>Регион:
+                                        <span class="search-results__item-terms-option _active tab-1">Калининградский</span>
+                                        <span class="search-results__item-terms-option tab-2">Московский</span>
+                                        <span class="search-results__item-terms-option tab-3">Подмосковский</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-results__item-rests search-results__item-rests_self-offset">
+                            <span class="search-results__item-rests-title">Виды отдыха:</span>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main _active tab-1">
+                                <i class="type-2"></i>
+                                <i class="type-4"></i>
+                                <i class="type-7"></i>
+                            </div>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main tab-2">
+                                <i class="type-2"></i>
+                                <i class="type-10"></i>
+                                <i class="type-11"></i>
+                                <i class="type-9"></i>
+                            </div>
+                            <div class="search-results__item-rests-list search-results__item-rests-list-main tab-3">
+                                <i class="type-10"></i>
+                                <i class="type-11"></i>
+                                <i class="type-12"></i>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+	</section>
+	<section class="service winter-places">
+		<div class="service__header page-wrapper page-wrapper_padding">
+			<div class="service__header-title">Зимние места отдыха</div>
+			<a href="#" class="section__link">Все места &#160&#8594</a>
+		</div>
+		<div class="about-media__container page-wrapper page-wrapper_padding">
+			<div class="about-media__item">
+				<img src="./img/places.png" alt="">
+				<div class="about-media__item-content">
+					<div class="about-media__item-label">
+						this is photoshop's
+					</div>
+					<div class="about-media__item-colum">
+						<div class="about-media__item-locating">
+							<i class="fas fa-map"></i> Камчатский
+						</div>
+						<div class="about-media__item-type">
+							<i class="fas fa-home"></i> База-отдыха
+						</div>
+						<div class="about-media__item-price">
+							от 12 000 &#8381
+						</div>
+					</div>
+				</div>
+				<div class="form-rest-type about-media__item-bottom">
+					<span class="form-rest-type__label">Виды отдыха</span>
+					<i class="routes-icon type-3"></i>
+					<i class="routes-icon type-2"></i>
+					<i class="routes-icon type-4"></i>
+					<i class="routes-icon type-1"></i>
+				</div>
+			</div>
+			<div class="about-media__item">
+				<img src="./img/places.png" alt="">
+				<div class="about-media__item-content">
+					<div class="about-media__item-label">
+						this is photoshop's
+					</div>
+					<div class="about-media__item-colum">
+						<div class="about-media__item-locating">
+							<i class="fas fa-map"></i> Камчатский
+						</div>
+						<div class="about-media__item-type">
+							<i class="fas fa-home"></i> База-отдыха
+						</div>
+						<div class="about-media__item-price">
+							от 12 000 &#8381
+						</div>
+					</div>
+				</div>
+				<div class="form-rest-type about-media__item-bottom">
+					<span class="form-rest-type__label">Виды отдыха</span>
+					<i class="routes-icon type-3"></i>
+					<i class="routes-icon type-2"></i>
+					<i class="routes-icon type-4"></i>
+					<i class="routes-icon type-1"></i>
+				</div>
+			</div>
+			<div class="about-media__item">
+				<img src="./img/places.png" alt="">
+				<div class="about-media__item-content">
+					<div class="about-media__item-label">
+						this is photoshop's
+					</div>
+					<div class="about-media__item-colum">
+						<div class="about-media__item-locating">
+							<i class="fas fa-map"></i> Камчатский
+						</div>
+						<div class="about-media__item-type">
+							<i class="fas fa-home"></i> База-отдыха
+						</div>
+						<div class="about-media__item-price">
+							от 12 000 &#8381
+						</div>
+					</div>
+				</div>
+				<div class="form-rest-type about-media__item-bottom">
+					<span class="form-rest-type__label">Виды отдыха</span>
+					<i class="routes-icon type-3"></i>
+					<i class="routes-icon type-2"></i>
+					<i class="routes-icon type-4"></i>
+					<i class="routes-icon type-1"></i>
+				</div>
+			</div>
+			<div class="about-media__item">
+				<img src="./img/places.png" alt="">
+				<div class="about-media__item-content">
+					<div class="about-media__item-label">
+						this is photoshop's
+					</div>
+					<div class="about-media__item-colum">
+						<div class="about-media__item-locating">
+							<i class="fas fa-map"></i> Камчатский
+						</div>
+						<div class="about-media__item-type">
+							<i class="fas fa-home"></i> База-отдыха
+						</div>
+						<div class="about-media__item-price">
+							от 12 000 &#8381
+						</div>
+					</div>
+				</div>
+				<div class="form-rest-type about-media__item-bottom">
+					<span class="form-rest-type__label">Виды отдыха</span>
+					<i class="routes-icon type-3"></i>
+					<i class="routes-icon type-2"></i>
+					<i class="routes-icon type-4"></i>
+					<i class="routes-icon type-1"></i>
+				</div>
+			</div>
+		</section>
+		<section class="service services-instructor">
+			<div class="service__header page-wrapper page-wrapper_padding">
+				<div class="service__header-title">Услуги инструкторов</div>
+				<a href="#" class="section__link">Все услуги &#160&#8594</a>
+			</div>
+			<div class="about-media__container about-media__layout-services page-wrapper page-wrapper_padding">
+
+				<div class="about-media__group">
+					<div class="about-media__item about-media__item-instructors">
+						<div class="about-media__item-content">
+							<div class="about-media__item-header">
+								THIS PHOTOSHOP VERSION OF LOREM IPSUM
+							</div>
+							<div class="about-media__item-main">
+								<div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+								<div class="about-media__item-main-features">
+									<div class="about-media__item-main-feature">
+										<i class="fab fa-fort-awesome"></i> <span>Компания: "Эльбрус"</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-star"></i> Оценка: <span class="no-link">нет</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-map-marker-alt"></i> Округ: <span class="no-link">Дальне-восточный</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-map"></i> Регион: <span class="no-link">Камчатский</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-rest-type about-media__item-bottom">
+							<span class="form-rest-type__label">Виды отдыха</span>
+							<i class="routes-icon type-3"></i>
+							<i class="routes-icon type-2"></i>
+							<i class="routes-icon type-4"></i>
+							<i class="routes-icon type-1"></i>
+						</div>
+					</div>
+					<div class="about-media__item about-media__item-instructors">
+						<div class="about-media__item-content">
+							<div class="about-media__item-header">
+								THIS PHOTOSHOP VERSION OF LOREM IPSUM
+							</div>
+							<div class="about-media__item-main">
+								<div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+								<div class="about-media__item-main-features">
+									<div class="about-media__item-main-feature">
+										<i class="fab fa-fort-awesome"></i> <span>Компания: "Эльбрус"</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-star"></i> Оценка: <span class="no-link">нет</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-map-marker-alt"></i> Округ: <span class="no-link">Дальне-восточный</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-map"></i> Регион: <span class="no-link">Камчатский</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-rest-type about-media__item-bottom">
+							<span class="form-rest-type__label">Виды отдыха</span>
+							<i class="routes-icon type-3"></i>
+							<i class="routes-icon type-2"></i>
+							<i class="routes-icon type-4"></i>
+							<i class="routes-icon type-1"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="about-media__group ">
+					<div class="about-media__item about-media__item-instructors">
+						<div class="about-media__item-content">
+							<div class="about-media__item-header">
+								THIS PHOTOSHOP VERSION OF LOREM IPSUM
+							</div>
+							<div class="about-media__item-main">
+								<div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+								<div class="about-media__item-main-features">
+									<div class="about-media__item-main-feature">
+										<i class="fab fa-fort-awesome"></i> <span>Компания: "Эльбрус"</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-star"></i> Оценка: <span class="no-link">нет</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-map-marker-alt"></i> Округ: <span class="no-link">Дальне-восточный</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-map"></i> Регион: <span class="no-link">Камчатский</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-rest-type about-media__item-bottom">
+							<span class="form-rest-type__label">Виды отдыха</span>
+							<i class="routes-icon type-3"></i>
+							<i class="routes-icon type-2"></i>
+							<i class="routes-icon type-4"></i>
+							<i class="routes-icon type-1"></i>
+						</div>
+					</div>
+					<div class="about-media__item about-media__item-instructors">
+						<div class="about-media__item-content">
+							<div class="about-media__item-header">
+								THIS PHOTOSHOP VERSION OF LOREM IPSUM
+							</div>
+							<div class="about-media__item-main">
+								<div class="about-media__item-main-cover"><img src="./img/places.png" alt=""></div>
+								<div class="about-media__item-main-features">
+									<div class="about-media__item-main-feature">
+										<i class="fab fa-fort-awesome"></i> <span>Компания: "Эльбрус"</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-star"></i> Оценка: <span class="no-link">нет</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-map-marker-alt"></i> Округ: <span class="no-link">Дальне-восточный</span>
+									</div>
+									<div class="about-media__item-main-feature">
+										<i class="fas fa-map"></i> Регион: <span class="no-link">Камчатский</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-rest-type about-media__item-bottom">
+							<span class="form-rest-type__label">Виды отдыха</span>
+							<i class="routes-icon type-3"></i>
+							<i class="routes-icon type-2"></i>
+							<i class="routes-icon type-4"></i>
+							<i class="routes-icon type-1"></i>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+	<section class="service articles">
+		<div class="service__header page-wrapper page-wrapper_padding">
+			<div class="service__header-title">Полезные статьи</div>
+			<a href="#" class="section__link">Все статьи &#160&#8594</a>
+		</div>
+		<div class="pop-routes__content page-wrapper">
+			<div class="pop-routes__content-item" style="background-image: url(img/pop-routes-1.jpg);">
+				<div class="top-line">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="1em" height="1em" viewBox="0 0 482.136 482.135" style="enable-background:new 0 0 482.136 482.135;" xml:space="preserve">
+						<g>
+							<path d="M455.482,198.184L326.829,326.832c-35.535,35.54-93.108,35.54-128.646,0l-42.881-42.886l42.881-42.876l42.884,42.876   c11.845,11.822,31.064,11.846,42.886,0l128.644-128.643c11.816-11.831,11.816-31.066,0-42.9l-42.881-42.881   c-11.822-11.814-31.064-11.814-42.887,0l-45.928,45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526   c35.535-35.521,93.136-35.521,128.644,0l42.886,42.881C491.018,105.045,491.018,162.663,455.482,198.184z M201.206,366.698   l-45.903,45.9c-11.845,11.846-31.064,11.817-42.881,0l-42.884-42.881c-11.845-11.821-11.845-31.041,0-42.886l128.646-128.648   c11.819-11.814,31.069-11.814,42.884,0l42.886,42.886l42.876-42.886l-42.876-42.881c-35.54-35.521-93.113-35.521-128.65,0   L26.655,283.946c-35.538,35.545-35.538,93.146,0,128.652l42.883,42.882c35.51,35.54,93.11,35.54,128.646,0l72.496-72.499   C246.724,384.578,222.588,379.197,201.206,366.698z" fill="#fff"/>
+						</g>
+					</svg><span><a href="#">Статья</a></span>
+				</div>
+				<div class="bottom-line">
+					<p>Каждый веб-разработчик знает, что такое текст-«рыба.</p>
+				</div>
+			</div>
+			<div class="pop-routes__content-item" style="background-image: url(img/pop-routes-2.jpg);">
+				<div class="top-line">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="1em" height="1em" viewBox="0 0 482.136 482.135" style="enable-background:new 0 0 482.136 482.135;" xml:space="preserve">
+						<g>
+							<path d="M455.482,198.184L326.829,326.832c-35.535,35.54-93.108,35.54-128.646,0l-42.881-42.886l42.881-42.876l42.884,42.876   c11.845,11.822,31.064,11.846,42.886,0l128.644-128.643c11.816-11.831,11.816-31.066,0-42.9l-42.881-42.881   c-11.822-11.814-31.064-11.814-42.887,0l-45.928,45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526   c35.535-35.521,93.136-35.521,128.644,0l42.886,42.881C491.018,105.045,491.018,162.663,455.482,198.184z M201.206,366.698   l-45.903,45.9c-11.845,11.846-31.064,11.817-42.881,0l-42.884-42.881c-11.845-11.821-11.845-31.041,0-42.886l128.646-128.648   c11.819-11.814,31.069-11.814,42.884,0l42.886,42.886l42.876-42.886l-42.876-42.881c-35.54-35.521-93.113-35.521-128.65,0   L26.655,283.946c-35.538,35.545-35.538,93.146,0,128.652l42.883,42.882c35.51,35.54,93.11,35.54,128.646,0l72.496-72.499   C246.724,384.578,222.588,379.197,201.206,366.698z" fill="#fff"/>
+						</g>
+					</svg><span><a href="#">Статья</a></span>
+				</div>
+				<div class="bottom-line">
+					<p>Каждый веб-разработчик знает, что такое текст-«рыба.</p>
+				</div>
+			</div>
+			<div class="pop-routes__content-item" style="background-image: url(img/pop-routes-3.jpg);">
+				<div class="top-line">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="1em" height="1em" viewBox="0 0 482.136 482.135" style="enable-background:new 0 0 482.136 482.135;" xml:space="preserve">
+						<g>
+							<path d="M455.482,198.184L326.829,326.832c-35.535,35.54-93.108,35.54-128.646,0l-42.881-42.886l42.881-42.876l42.884,42.876   c11.845,11.822,31.064,11.846,42.886,0l128.644-128.643c11.816-11.831,11.816-31.066,0-42.9l-42.881-42.881   c-11.822-11.814-31.064-11.814-42.887,0l-45.928,45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526   c35.535-35.521,93.136-35.521,128.644,0l42.886,42.881C491.018,105.045,491.018,162.663,455.482,198.184z M201.206,366.698   l-45.903,45.9c-11.845,11.846-31.064,11.817-42.881,0l-42.884-42.881c-11.845-11.821-11.845-31.041,0-42.886l128.646-128.648   c11.819-11.814,31.069-11.814,42.884,0l42.886,42.886l42.876-42.886l-42.876-42.881c-35.54-35.521-93.113-35.521-128.65,0   L26.655,283.946c-35.538,35.545-35.538,93.146,0,128.652l42.883,42.882c35.51,35.54,93.11,35.54,128.646,0l72.496-72.499   C246.724,384.578,222.588,379.197,201.206,366.698z" fill="#fff"/>
+						</g>
+					</svg><span><a href="#">Статья</a></span>
+				</div>
+				<div class="bottom-line">
+					<p>Каждый веб-разработчик знает, что такое текст-«рыба.</p>
+				</div>
+			</div>
+			<div class="pop-routes__content-item" style="background-image: url(img/pop-routes-4.jpg);">
+				<div class="top-line">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="1em" height="1em" viewBox="0 0 482.136 482.135" style="enable-background:new 0 0 482.136 482.135;" xml:space="preserve">
+						<g>
+							<path d="M455.482,198.184L326.829,326.832c-35.535,35.54-93.108,35.54-128.646,0l-42.881-42.886l42.881-42.876l42.884,42.876   c11.845,11.822,31.064,11.846,42.886,0l128.644-128.643c11.816-11.831,11.816-31.066,0-42.9l-42.881-42.881   c-11.822-11.814-31.064-11.814-42.887,0l-45.928,45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526   c35.535-35.521,93.136-35.521,128.644,0l42.886,42.881C491.018,105.045,491.018,162.663,455.482,198.184z M201.206,366.698   l-45.903,45.9c-11.845,11.846-31.064,11.817-42.881,0l-42.884-42.881c-11.845-11.821-11.845-31.041,0-42.886l128.646-128.648   c11.819-11.814,31.069-11.814,42.884,0l42.886,42.886l42.876-42.886l-42.876-42.881c-35.54-35.521-93.113-35.521-128.65,0   L26.655,283.946c-35.538,35.545-35.538,93.146,0,128.652l42.883,42.882c35.51,35.54,93.11,35.54,128.646,0l72.496-72.499   C246.724,384.578,222.588,379.197,201.206,366.698z" fill="#fff"/>
+						</g>
+					</svg><span><a href="#">Статья</a></span>
+				</div>
+				<div class="bottom-line">
+					<p>Каждый веб-разработчик знает, что такое текст-«рыба.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<footer class="footer">
+    <div class="page-wrapper page-wrapper_padding footer__wrapper">
+        <div class="footer__left">
+            <img src="img/logo-white.svg" width="160" class="footer__logo"/>
+            <div class="footer__apps">
+                <span class="footer__apps-title">Мобильное приложение:</span>
+                <div class="footer__apps-img">
+                    <img src="img/apps2.jpg" class="footer__logo"/>
+                    <!--<a href="#" class="footer__apps-link footer__apps-link-android"></a>-->
+                    <!--<a href="#" class="footer__apps-link footer__apps-link-ios"></a>-->
+                </div>
+            </div>
+        </div>
+        <div class="footer__menu">
+            <div class="footer__menu-list">
+                <div class="footer__menu-title">О НАС</div>
+                <ul class="footer__menu-links">
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">О проекте</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Карта сайта</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Благотворительность</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-list">
+                <div class="footer__menu-title">Полезное</div>
+                <ul class="footer__menu-links">
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Новости</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Статьи</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Справки</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Форум</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-list">
+                <div class="footer__menu-title">Права</div>
+                <ul class="footer__menu-links">
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Условия пользования</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Права</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Правила сайта</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-list">
+                <div class="footer__menu-title">Обратная связь</div>
+                <ul class="footer__menu-links">
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Нашли ошибку</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Тех.Поддержка</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Добавить заведение</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Рекламодателям</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__social">
+                <a href="mailto:poisk@mail.ru" class="footer__mail-link"><i class="fa fa-envelope"></i>poisk@mail.ru</a>
+                <div class="footer__social-title">Мы в социальных сетях:</div>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-in"><i
+                            class="fab fa-instagram"></i></a></li>
+                    <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-vk"><i
+                            class="fab fa-vk"></i></a></li>
+                    <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-od"><i
+                            class="fab fa-odnoklassniki"></i></a></li>
+                    <li class="footer__social-item"><a href="#" class="footer__social-link footer__social-fb"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__copyright">
+        <span>PoiskPuti.ru © Все права защищены</span>
+    </div>
+</footer>
+</div>
+<script src="js/min/all.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+</body>
+</html>
+
