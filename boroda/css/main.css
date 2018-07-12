@@ -150,8 +150,10 @@ body {
 	-o-flex-direction: column;
 	flex-direction: column;
 	justify-content: space-between;
-	text-align: right;
 	color: #623a08
+}
+.head__right-sign{
+	text-align: right;
 }
 .head__right a{
 	color: #623a08;
