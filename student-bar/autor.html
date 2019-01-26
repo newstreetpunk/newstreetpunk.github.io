@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>OptimizedHTML 4</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+	<header class="main-head">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-sm-2 col-xs-3 col-4">
+						<a href="index.html" class="logo"><img src="img/logo.png" alt="Studen Bar"></a>
+					</div>
+					<div class="col-lg-5 col-sm-1 col-xs-2 col-2">
+						<span class="mobile-menu"><i class="fas fa-bars"></i></span>
+						<nav class="main-menu">
+							<ul class="main-menu__list">
+								<li class="main-menu__item"><a href="#" class="main-menu__link">Почему Вам стоит работать у нас</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-4 col-sm-8 col-xs-5 col-4">
+						<a href="#" class="arhive fwb">Работа</a>
+					</div>
+					<div class="col-lg-1 col-sm-1 col-xs-2 col-2">
+						<a href="#sign" class="enter-icon"><i class="fas fa-sign-in-alt"></i></a>
+						<div class="sign">
+							<a href="#sign" class="sign-in">Вход/Регистрация</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+	<div class="page autor-page" style="background-image: url(img/autor_bg.jpg)">
+
+		<nav class="toggle-menu">
+			<span class="close"><i class="far fa-times-circle"></i></span>
+			<ul class="toggle-menu__list">
+				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link toggle-arhive">Работа</a></li>
+				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link">Почему Вам стоит работать у нас</a></li>
+			</ul>
+		</nav>
+		
+		<div class="container">
+			<div class="page-content">
+				<div class="page-content__title">
+					<h1>Удаленная работа <br>авторам студенческих работ на <span class="ttu">Studen Bar</span></h1>
+					<p>Вы получаете ежедневный доступ к большому количеству заказов<br>с гарантированной оплатой. Наш сервис позволит вам зарабатывать<br>сразу после регистрации!</p>
+				</div>
+
+				<a href="#" class="main-btn main-btn-link">Разместить задание</a>
+
+				<div class="steps">
+					<div class="steps-item">
+						<div class="steps-item__number">1</div>
+						<div class="steps-item__discr"><p>Зарегистрируйтесь в качестве<br>автора, заполнив персональную анкету</p></div>
+					</div>
+					<div class="steps-item">
+						<div class="steps-item__number">2</div>
+						<div class="steps-item__discr"><p>Находите подходящие<br>заказы в личном кабинете</p></div>
+					</div>
+					<div class="steps-item">
+						<div class="steps-item__number">3</div>
+						<div class="steps-item__discr"><p>Выполняйте заказы,<br>зарабатывайте деньги и рейтинг</p></div>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- МОДАЛКИ -->
+
+	<div id="sign" class="mfp-hide white-popup-block">
+		<div class="sign-wrap">
+		<form class="main-form sign-up-form">
+			<h2>Регистрация</h2>
+				<!-- <div id="toggles"> 
+					<input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle"/>
+					<label for="checkbox3" class="checkbox-label" data-off="Уже есть аккаунт?" data-on="Уже есть аккаунт"></label>
+				</div> -->
+				<a href="#" class="form-link">У меня уже есть аккаунт</a>
+				<input type="text" name="name" placeholder="Введите Ваше имя*" required>
+				<input type="text" name="surname" placeholder="Введите Вашу фамилию">
+				<input type="email" name="email" placeholder="Введите Ваш e-mail*" required>
+				<span class="pass">
+					<input type="password" name="password" placeholder="Придумайте пароль*" required>
+					<i class="fas fa-eye-slash"></i>
+				</span>			
+				<button class="main-btn">Регистрация</button>
+				<p>или войдите, используя социальную сеть</p>
+				<div class="social-icon-link">
+					<a href="#" class="vk"><i class="fab fa-vk"></i></a>
+					<a href="#" class="ok"><i class="fab fa-odnoklassniki"></i></a>
+					<a href="#" class="fb"><i class="fab fa-facebook-f"></i></i></a>			
+				</div>
+			</form>
+			<form class="main-form sign-in-form">
+			<h2>Вход</h2>
+				
+				<input type="email" name="email" placeholder="Введите Ваш e-mail*" required>
+				<span class="pass">
+					<input type="password" name="password" placeholder="Введите пароль*" required>
+					<i class="fas fa-eye-slash"></i>
+				</span>			
+				<button class="main-btn">Вход</button>
+				<div id="toggles"> 
+					<input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle" checked/>
+					<label for="checkbox3" class="checkbox-label" data-off="Запомнить меня" data-on="Запомнить меня"></label>
+				</div>
+				<a href="#" class="form-link__sign-in">Вернуться к регистрации</a>
+
+				<p>или войдите, используя социальную сеть</p>
+				<div class="social-icon-link">
+					<a href="#" class="vk"><i class="fab fa-vk"></i></a>
+					<a href="#" class="ok"><i class="fab fa-odnoklassniki"></i></a>
+					<a href="#" class="fb"><i class="fab fa-facebook-f"></i></i></a>			
+				</div>
+			</form>
+			</div>
+		</div>
+
+
+
+
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
