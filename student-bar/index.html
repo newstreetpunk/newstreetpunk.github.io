@@ -32,20 +32,7 @@
 <body>
 
 	<!-- Custom HTML -->
-
-	<div class="page" style="background-image: url(img/index_bg.jpg)">
-
-		<nav class="toggle-menu">
-			<span class="close"><i class="far fa-times-circle"></i></span>
-			<ul class="toggle-menu__list">
-				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link toggle-arhive">Библиотека заданий</a></li>
-				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link">Как мы работаем?</a></li>
-				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link">Почему мы?</a></li>
-				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link">Отзывы</a></li>
-			</ul>
-		</nav>
-
-		<header class="main-head">
+	<header class="main-head">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-2 col-sm-2 col-xs-3 col-4">
@@ -62,18 +49,29 @@
 						</nav>
 					</div>
 					<div class="col-lg-4 col-sm-8 col-xs-5 col-4">
-						<a href="#" class="arhive fwb">Библитека заданий</a>
+						<a href="#" class="arhive fwb">Библиотека заданий</a>
 					</div>
 					<div class="col-lg-1 col-sm-1 col-xs-2 col-2">
-						<span class="enter-icon"><i class="fas fa-sign-in-alt"></i></span>
+						<a href="#sign" class="enter-icon"><i class="fas fa-sign-in-alt"></i></a>
 						<div class="sign">
-							<a href="#" class="sign-in">Вход</a>
-							<a href="#" class="sign-up">Регистрация</a>
+							<a href="#sign" class="sign-in">Вход/Регистрация</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
+
+	<div class="page" style="background-image: url(img/index_bg.jpg)">
+
+		<nav class="toggle-menu">
+			<span class="close"><i class="far fa-times-circle"></i></span>
+			<ul class="toggle-menu__list">
+				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link toggle-arhive">Библиотека заданий</a></li>
+				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link">Как мы работаем?</a></li>
+				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link">Почему мы?</a></li>
+				<li class="toggle-menu__item"><a href="#" class="toggle-menu__link">Отзывы</a></li>
+			</ul>
+		</nav>
 		
 		<div class="container">
 			<div class="page-content">
@@ -112,7 +110,56 @@
 		</div>
 	</div>
 
+	<!-- МОДАЛКИ -->
 
+	<div id="sign" class="mfp-hide white-popup-block">
+		<div class="sign-wrap">
+		<form class="main-form sign-up-form">
+			<h2>Регистрация</h2>
+				<!-- <div id="toggles"> 
+					<input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle"/>
+					<label for="checkbox3" class="checkbox-label" data-off="Уже есть аккаунт?" data-on="Уже есть аккаунт"></label>
+				</div> -->
+				<a href="#" class="form-link">У меня уже есть аккаунт</a>
+				<input type="text" name="name" placeholder="Введите Ваше имя*" required>
+				<input type="text" name="surname" placeholder="Введите Вашу фамилию">
+				<input type="email" name="email" placeholder="Введите Ваш e-mail*" required>
+				<span class="pass">
+					<input type="password" name="password" placeholder="Придумайте пароль*" required>
+					<i class="fas fa-eye-slash"></i>
+				</span>			
+				<button class="main-btn">Регистрация</button>
+				<p>или войдите, используя социальную сеть</p>
+				<div class="social-icon-link">
+					<a href="#" class="vk"><i class="fab fa-vk"></i></a>
+					<a href="#" class="ok"><i class="fab fa-odnoklassniki"></i></a>
+					<a href="#" class="fb"><i class="fab fa-facebook-f"></i></i></a>			
+				</div>
+			</form>
+			<form class="main-form sign-in-form">
+			<h2>Вход</h2>
+				
+				<input type="email" name="email" placeholder="Введите Ваш e-mail*" required>
+				<span class="pass">
+					<input type="password" name="password" placeholder="Введите пароль*" required>
+					<i class="fas fa-eye-slash"></i>
+				</span>			
+				<button class="main-btn">Вход</button>
+				<div id="toggles"> 
+					<input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle" checked/>
+					<label for="checkbox3" class="checkbox-label" data-off="Запомнить меня" data-on="Запомнить меня"></label>
+				</div>
+				<a href="#" class="form-link__sign-in">Вернуться к регистрации</a>
+
+				<p>или войдите, используя социальную сеть</p>
+				<div class="social-icon-link">
+					<a href="#" class="vk"><i class="fab fa-vk"></i></a>
+					<a href="#" class="ok"><i class="fab fa-odnoklassniki"></i></a>
+					<a href="#" class="fb"><i class="fab fa-facebook-f"></i></i></a>			
+				</div>
+			</form>
+			</div>
+		</div>
 
 
 
