@@ -1,5 +1,16 @@
 $(function() {
 
+		$('.toggle-btn__menu').click(function(){
+			$('.main-mnu ul').toggleClass('active');
+			$('.search-wrap').toggleClass('dn');
+		});
+		$('.main-mnu ul li a, .close-btn').click(function(){
+			$('.main-mnu ul').removeClass('active');
+			$('.search-wrap').removeClass('dn');
+		});
+
+		$('.choice-item__wrap:odd').addClass('bot');
+
 		$('.main-mnu').on('click','a', function (event) {
 				event.preventDefault();
 				$('.main-mnu li').removeClass('active');
@@ -14,7 +25,7 @@ $(function() {
    });
 
 	//E-mail Ajax Send
-	$(".m-form").submit(function() { //Change
+	$("form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
@@ -42,10 +53,18 @@ $(function() {
 		};
 	});
 
-	var h_hght = 90; // высота шапки
-	var h_mrg = 0;    // отступ когда шапка уже не видна
+	
+
+	if($(window).width() < 576){
+			var h_hght = 170;
+		}else{
+			var h_hght = 90;
+	};
+
+		var h_mrg = 0;
 								 
-	$(function(){
+	$(function mm (){
+
  
 		var elem = $('.top-line');
 		var top = $(this).scrollTop();
@@ -62,8 +81,13 @@ $(function() {
 				} else {
 						elem.css('top', h_mrg);
 				}
+				$(window).resize(function(){
+		mm
+		});
 		});
 	});
+
+
 
 
 	$('.works-item__img').append('<span>');
