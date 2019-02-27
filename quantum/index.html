@@ -33,7 +33,9 @@
 
 <body class="ishome">
 
-	<header class="main-head">
+	<div class="top"><i class="fa fa-angle-up"></i></div>
+
+	<header class="main-head" id="header">
 		<div class="container">
 
 			<div class="main-head__wrap">
@@ -69,16 +71,16 @@
 			<div class="top-line__wrap">
 				<div class="main-mnu">
 					<ul>
-						<li><a href="#">Главная</a></li>
-						<li><a href="#">Каталог</a></li>
-						<li><a href="#">Хиты продаж</a></li>
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Производство</a></li>
-						<li><a href="#">Сертификаты</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li class="active"><a href="#header">Главная</a></li>
+						<li><a href="#catalog">Каталог</a></li>
+						<li><a href="#hits">Хиты продаж</a></li>
+						<li><a href="#about">О нас</a></li>
+						<li><a href="#production">Производство</a></li>
+						<li><a href="#sertificates">Сертификаты</a></li>
+						<li><a href="#contacts">Контакты</a></li>
 					</ul>
 				</div>
-				<a href="#" class="btn">Заказать звонок</a>
+				<a href="#modal-form" class="btn modal-link">Заказать звонок</a>
 				<button class="toggle-btn__menu"><i class="fas fa-bars"></i></i></button>
 			</div>
 		</div>
@@ -93,7 +95,7 @@
 						<form class="form-wrap">
 							<i class="far fa-envelope"></i>
 							<input type="text" placeholder="Ваш e-mail">
-							<a href="#" class="btn">Получить <br>консультацию</a>
+							<button class="btn">Получить <br>консультацию</button>
 						</form>						
 					</div>
 				</div>
@@ -124,11 +126,11 @@
 							<p>Оперативная <br>доставка</p>							
 						</div>
 					</div>
-
 				</div>
 	</div>
 
-	<section class="catalog">
+	<section class="catalog" id="catalog">
+		<div class="posa-btn"><a href="#modal-form" class="btn modal-link">Оставить заявку</a></div>
 		<h2>Каталог продукции</h2>
 		<div class="container">
 			<div class="catalog-content">
@@ -230,12 +232,17 @@
 						<li><a href="#"><img src="img/catalog/1.jpg" alt="ALT">Ссылка ссылка</a></li>
 					</ul>
 				</div>
+				<div class="catalog-form">
+					<a href="#modal-form" class="btn btn-small modal-link">Оставить заявку</a>
+					<h5>Цены ниже доставка быстрее!</h5>
+					<p>Ощутите все преимущества работы с профессионалами!</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="choice">
-		<h2>Почему выбирают нас</h2>
+		<h2>6 причин выбрать нас</h2>
 		<div class="container">
 			<div class="choice-content">
 				<div class="choice-item__wrap">
@@ -297,7 +304,7 @@
 		
 	</section>
 
-	<section class="hits">
+	<section class="hits" id="hits">
 		<h2>Хиты продаж</h2>
 		<div class="container">
 			<div class="hits-content">
@@ -367,8 +374,8 @@
 		
 	</section>
 
-	<section class="about">
-		<h2>О нас</h2>
+	<section class="about" id="about">
+		<h2>о нас в цифрах</h2>
 		<div class="container">
 			<div class="about-content">
 				<div class="about-item">
@@ -377,37 +384,37 @@
 						<span>10</span>
 						<div>лет</div>
 					</div>
-					<p>Более 10 лет <br>опыт на рынке</p>
+					<p>Более 10 лет <br>опыта сотрудников</p>
 				</div>
 				<div class="about-item">
 					<div class="about-item__circle">
 						<div>Более</div>
-						<span>10</span>
-						<div>лет</div>
+						<span>700</span>
+						<div>клиентов</div>
 					</div>
-					<p>Более 10 лет <br>опыт на рынке</p>
+					<p>Более 700 <br>довольных клиентов</p>
 				</div>
 				<div class="about-item">
 					<div class="about-item__circle">
 						<div>Более</div>
-						<span>1000</span>
-						<div>лет</div>
+						<span>730 000</span>
+						<div>тонн</div>
 					</div>
-					<p>Более 10 лет <br>опыт на рынке</p>
+					<p>Более 730 000 тонн <br>продукции поставлено</p>
 				</div>
 				<div class="about-item">
 					<div class="about-item__circle">
 						<div>Более</div>
-						<span>10</span>
-						<div>лет</div>
+						<span>3740</span>
+						<div>заказов</div>
 					</div>
-					<p>Более 10 лет <br>опыт на рынке</p>
+					<p>Более 3740 заказов <br>выполнено</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="production">
+	<section class="production" id="production">
 		<h2>Производство</h2>
 		<div class="container">
 			<div class="production-text">
@@ -460,7 +467,7 @@
 		</div>
 	</section>
 
-	<section class="sertificates">
+	<section class="sertificates" id="sertificates">
 		<h2>Сертификаты</h2>
 		<div class="container">
 			<div class="sertificates-content">
@@ -479,7 +486,7 @@
 		
 	</section>
 	
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<h2>Контакты</h2>
 		<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abbb105509d2ca4e8fb795d48d0eeaefcf318decaf70455e006eaab92c7c0cd3e&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
 		<div class="contacts-info">
@@ -534,10 +541,30 @@
 					<i class="fas fa-phone"></i>
 					<a href="tel:8123456789" class="phone">8(123)456-78-90</a>
 				</div>
-				<a href="#" class="btn">Заказать звонок</a>	
+				<a href="#modal-form" class="btn modal-link">Заказать звонок</a>	
 			</div>
 		</div>
-	</footer>	
+	</footer>
+
+	<div id="modal-form" class="modal-form mfp-hide">
+		<div class="modal-form__title">Обратный звонок</div>
+		<div class="modal-form__text">Оставьте свои данные и наш менеджер свяжется с Вами</div>
+		<form class="m-form">
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Site Name">
+		<input type="hidden" name="admin_email" value="admin@mail.com">
+		<input type="hidden" name="form_subject" value="Form Subject">
+		<!-- END Hidden Required Fields -->
+
+		<input type="text" name="Name" placeholder="Ваше Имя..." required><br>
+		<input type="text" name="E-mail" placeholder="Ваш телефон или e-mail..." required><br>
+		<button class="btn">Отправить</button>
+
+		<div class="modal-form__text--small">нажимая кнопку "Отправить", Вы соглашаетесь с </br><a href="#">политикой конфиденциальности</a></div>
+
+		</form>
+	</div>	
 
 	<script src="js/scripts.min.js"></script>
 
