@@ -22,7 +22,7 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
 	
 	<link rel="stylesheet" href="css/main.min.css">
 
@@ -94,8 +94,13 @@
 						<h1>Производство и поставка оборудования</h1>
 						<p>для ЛЭП, ВОЛС и кабельных линий с доставкой по России и СНГ</p>
 						<form class="form-wrap">
+
+							<input type="hidden" name="project_name" value="Quantum">
+							<input type="hidden" name="admin_email" value="newstreetpunk@yandex.ru">
+							<input type="hidden" name="form_subject" value="Заказ консультации. Баннер">
+
 							<i class="far fa-envelope"></i>
-							<input type="text" placeholder="Ваш e-mail">
+							<input type="text" placeholder="Ваш e-mail" required>
 							<button class="btn">Получить <br>консультацию</button>
 						</form>						
 					</div>
@@ -321,7 +326,7 @@
 						</div>
 						<div class="hits-item__price"><span>₽</span>79.50 руб. / 77.50 руб.</div>
 						<div class="hits-item__count"><p>Заказ кратно упаковке 40 шт.</p></div>
-						<a href="#" class="btn btn-small">Оптовая цена</a>
+						<a href="#modal-form--tovar" class="btn btn-small modal-link">Оптовая цена</a>
 					</div>
 				</div>
 				<div class="hits-item">
@@ -515,6 +520,11 @@
 				</div>
 				<p>Оставьте заявку и мы Вам перезвоним</p>
 				<form class="callback-form">
+
+					<input type="hidden" name="project_name" value="Quantum">
+					<input type="hidden" name="admin_email" value="newstreetpunk@yandex.ru">
+					<input type="hidden" name="form_subject" value="Заказ обратного звонка. Контакты">
+
 					<input type="text" placeholder="Имя">
 					<input type="text" placeholder="Телефон или e-mail*" required>
 					<button class="btn">Отправить</button>
@@ -553,9 +563,9 @@
 		<form class="m-form">
 
 		<!-- Hidden Required Fields -->
-		<input type="hidden" name="project_name" value="Site Name">
-		<input type="hidden" name="admin_email" value="admin@mail.com">
-		<input type="hidden" name="form_subject" value="Form Subject">
+		<input type="hidden" name="project_name" value="Quantum">
+		<input type="hidden" name="admin_email" value="newstreetpunk@yandex.ru">
+		<input type="hidden" name="form_subject" value="Заказ обратного звонка">
 		<!-- END Hidden Required Fields -->
 
 		<input type="text" name="Name" placeholder="Ваше Имя..." required><br>
@@ -566,6 +576,26 @@
 
 		</form>
 	</div>	
+
+	<div id="modal-form--tovar" class="modal-form mfp-hide">
+		<div class="modal-form__title">Обратный звонок</div>
+		<div class="modal-form__text">Оставьте свои данные и наш менеджер свяжется с Вами</div>
+		<form class="m-form">
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Quantum">
+		<input type="hidden" name="admin_email" value="newstreetpunk@yandex.ru">
+		<input type="hidden" name="form_subject" value="Заказ обратного звонка. Хиты продаж">
+		<!-- END Hidden Required Fields -->
+
+		<input type="text" name="Name" placeholder="Ваше Имя..." required><br>
+		<input type="text" name="E-mail" placeholder="Ваш телефон или e-mail..." required><br>
+		<button class="btn">Отправить</button>
+
+		<div class="modal-form__text--small">нажимая кнопку "Отправить", Вы соглашаетесь с </br><a href="#">политикой конфиденциальности</a></div>
+
+		</form>
+	</div>
 
 	<script src="js/scripts.min.js"></script>
 
