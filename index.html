@@ -25,6 +25,44 @@
             	</div>
             </div>
         </div>
+        
+        <div class="fix__box" id="fix__box">
+		<style>
+			.fix__box{max-width:320px;width:100%;position:fixed;font-family:inherit;top:0;right:-320px;padding:30px 20px 20px;-webkit-transition: all .5s ease;-o-transition: all .5s ease;transition: all .5s ease;-webkit-box-shadow:0 0 20px rgba(0,0,0,.2);box-shadow:0 0 20px rgba(0,0,0,.2);}
+			.fix__box h3{margin-top:0 !important;margin-bottom:20px !important;text-align:center !important;line-height:1 !important}
+			.fix__box-policy{font-size:12px;line-height:inherit;display:block;margin-bottom:15px}
+			.fix-close{width:25px;height:25px;line-height:22px;text-align:center;position:absolute;right:10px;top:5px;cursor:pointer;opacity:.3}
+			.fix-close:hover{opacity:.8}
+			input{width:100%}
+			input[type=button],input[type=submit],button,a.btn{cursor:pointer;text-decoration:none;margin-bottom:0;display:block;width:100%}
+		</style>
+		<h3>Заголовок, если нужен</h3>
+		<div class="fix-close" title="Закрыть">&#10006;</div>
+		<form action="#">
+			<input type="text" placeholder="Ваше имя">
+			<input type="text" placeholder="Ваш телефон">
+			<span class="fix__box-policy">* Нажимая кнопку действия, Вы даете согласие на обработку Ваших персональных данных</span>
+			<input type="submit" value="Заказать звонок">
+		</form>
+
+		<script>
+			function getTopOffset(e) { 
+				var y = 800;
+				do { y += e.offsetTop; } while (e = e.offsetParent);
+				return y;
+			}
+			var block = document.getElementById('fix__box');
+			if ( null != block ) {
+				var topPos = getTopOffset( block );
+				window.onscroll = function() {
+					var newcss = (topPos < window.pageYOffset) ? 
+					'right: 0;' : 'right: -320px;';
+					block.setAttribute( 'style', newcss );
+				}
+			}
+		</script>	
+
+	</div>
 
 
         <section class="header-top-section">
